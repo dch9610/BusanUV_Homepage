@@ -1,0 +1,10 @@
+@font-face {
+    font-family: 'Jal';
+    src: url('../font/Jalful.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body{
+    font-family: 'Jal'
+}
