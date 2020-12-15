@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+
+  <!-- Head -->
+  {% include 'public/head.html' %}
+
+</head>
+
+<body>
+
+  {% include 'public/nav.html' %}
+
+  <!-- Page Content -->
+    <div class="container">
+      <!-- Page Heading/Breadcrumbs -->
+      <h1 class="mt-4 mb-3"> 리뷰 읽기</h1>
+
+      <!-- Content Row -->
+      <div class="row">
+        <div class="col-lg-2 mb-2">
+          <div class="card h-15">
+            <a class="card-header" href="{{url_for('review')}}">리뷰작성
+            </a>
+          </div>
+          <div class="card h-15">
+            <a class="card-header" href="{{url_for('review_r)}}">리뷰보기
+            </a>
+          </div>
+        </div>
+        <div>
+            <table border ='1'>
+                <thead>
+                    <tr>
+                        <th>작성자</th>
+                        <th>상호명</th>
+                        <th>별점</th>
+                        <th>메뉴</th>
+                        <th>가격</th>
+                        <th>후기</th>
+                    </tr>
+                </thead>
+
+                <tbody>    
+                    {% for riview in reviews: %}
+                        <tr>
+                            <td>{{ review.reviewer }}</td>
+                            <td>{{ review.name }}</td>
+                            <td>{{ review.star }}</td>
+                            <td>{{ review.menu }}</td>
+                            <td>{{ review.price }}</td>
+                            <td>{{ review.review }}</td>
+                        </tr>
+                    {% endfor %}
+                
+                </tbody>
+            </table>>
+
+
+</html>
