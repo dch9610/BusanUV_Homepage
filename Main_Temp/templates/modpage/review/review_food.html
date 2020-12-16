@@ -1,18 +1,49 @@
-<div class="col-lg-6 mb-8">
-    <div class="card card-outline-primary h-20">
-      <div class="card-body">
-        <input class = "review-name" style = "width:200px; height:25px" placeholder="작성자"/>
-      </div>
-        <h6>음식점 이름</h6>
-        <input class = "food-name" style = "width:100px; height:25px"/>
-        <h6>메뉴</h6>
-        <input class = "menu" style = "width:100px; height:25px"/></br>
-        <h6>후기</h6>
-        <input class = "review" style = "width:450px; height:30px"/></br>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-        <li class="list-group-item">
-          <a href="#" class="btn btn-primary">리뷰 등록</a>
-        </li>
-      </ul>
-    </div>
+<div>
+  <form method="post" action="insert.jsp">
+    <label>작성자</label>
+    <input class="food-reviewer"  type="text" name="reviewer" 
+    style= "text-align:left; width:150px; height:25px;" request/><br>
+  </form>
+</div>
+<div>
+  <form method="post" action="insert.jsp" class='form-inline'>
+          <label> 음식점</label>
+          &#160;<input type=text class="food-name" name="name" 
+          style=" width:100px; height:25px" request/>
+          <label> 별점</label>
+          &#160;<input class="food-star" name="star" 
+          style="width:100px; height:25px" request/>
+  </form>
+</div>
+<div>
+  <form method="post" action="insert.jsp" class='form-inline'>
+          <label> 메뉴 &#160;&#160;</label>
+          &#160;<input type="text" class="food-menu" name="menu" 
+          style="width:100px; height:25px" request/>
+          &#160;<label> 가격</label>
+          <input type="number" class="food-price" name="price"
+              style="width:100px; height:25px" request/><br>
+  </form>
+  <form method="post" action="insert.jsp">
+    <label>후기</label>
+    &#160; &#160;<input class="food-review" name="review" style="width:450px; height:50px" request/>
+  </form>
   </div>
+<li class="list-group-item">
+  <input type='submit' value='리뷰 등록' class="btn btn-primary btn-block"/>
+  <!-- style="color: #FFFAF0; background-color:#00BFFF; border:none; width:100px; height:30px"/> -->
+  <script type="text/javascript">
+    function getfoodInputValue(){
+      let foodReviewer   = $('.food-reviewer').val()
+      let foodName       = $('.food-name').val()
+      let foodStar       = $('.food-star').val()
+      let foodMenu       = $('.food-menu').val()
+      let foodPrice      = $('.food-price').val()
+      let foodReview     = $('.food-review').val();
+    }
+  </script>
+  <!-- <script src="../../plugins/jquery/jquery.min.js"></script>
+  <script src="../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script> -->
+</li>

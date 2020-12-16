@@ -54,6 +54,17 @@ def game():
     return render_template('subpage/game.html', name='사용자명')
 ########################################
 
+#####map#####
+@app.route('/map_cafe')
+def map_cafe():    
+    # 렌더링시 데이터를 전달하고 싶으면 키=값 형태로 파라미터를 추가
+    # **kargs
+    return render_template('modpage/cafe/map_cafe.html')
+
+
+
+
+
 # food #################################
 @app.route('/search')
 def search():
