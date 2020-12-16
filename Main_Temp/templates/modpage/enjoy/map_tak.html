@@ -23,7 +23,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_66e16cfe0607462687dc215f1e54a28e {
+                #map_fcf90bc51c5241a19e56930590a38ecb {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -35,13 +35,13 @@
 </head>
 <body>    
     
-            <div class="folium-map" id="map_66e16cfe0607462687dc215f1e54a28e" ></div>
+            <div class="folium-map" id="map_fcf90bc51c5241a19e56930590a38ecb" ></div>
         
 </body>
 <script>    
     
-            var map_66e16cfe0607462687dc215f1e54a28e = L.map(
-                "map_66e16cfe0607462687dc215f1e54a28e",
+            var map_fcf90bc51c5241a19e56930590a38ecb = L.map(
+                "map_fcf90bc51c5241a19e56930590a38ecb",
                 {
                     center: [35.23163594252489, 129.08397894144363],
                     crs: L.CRS.EPSG3857,
@@ -57,32 +57,57 @@
 
         
     
-            var tile_layer_d436db9e42154c218ae3f0a111889f11 = L.tileLayer(
+            var tile_layer_d4737f6fc0264c4aa211ac410b92b37b = L.tileLayer(
                 "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
                 {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
-            ).addTo(map_66e16cfe0607462687dc215f1e54a28e);
+            ).addTo(map_fcf90bc51c5241a19e56930590a38ecb);
         
     
-            var marker_2bcbe19630794a609425a675189617db = L.marker(
-                [35.23163594252489, 129.08397894144363],
+            var marker_97a4d5abfa154769937565ec8baba242 = L.marker(
+                [35.2313580508101, 129.084581915373],
                 {}
-            ).addTo(map_66e16cfe0607462687dc215f1e54a28e);
+            ).addTo(map_fcf90bc51c5241a19e56930590a38ecb);
         
     
-            var icon_44e606bbf3084da28b011de2482726e6 = L.AwesomeMarkers.icon(
-                {"extraClasses": "fa-rotate-0", "icon": "thumbs-up", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            var icon_d9fd447250de41bca35028789dbb7e82 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "thumbs-up", "iconColor": "white", "markerColor": "darkgreen", "prefix": "glyphicon"}
             );
-            marker_2bcbe19630794a609425a675189617db.setIcon(icon_44e606bbf3084da28b011de2482726e6);
+            marker_97a4d5abfa154769937565ec8baba242.setIcon(icon_d9fd447250de41bca35028789dbb7e82);
         
     
-        var popup_84ca20fa5f16448285aa0c0bf479e78c = L.popup({"maxWidth": "100%"});
+        var popup_11bccfd00f694746a7e97a7285bf2636 = L.popup({"maxWidth": "100%"});
 
         
-            var html_a62d412c817e48b3a493c94322e97f6f = $(`<div id="html_a62d412c817e48b3a493c94322e97f6f" style="width: 100.0%; height: 100.0%;">부산대학교 정문</div>`)[0];
-            popup_84ca20fa5f16448285aa0c0bf479e78c.setContent(html_a62d412c817e48b3a493c94322e97f6f);
+            var html_c66c1995fd4d4289b8f5fc9a657f2eb5 = $(`<div id="html_c66c1995fd4d4289b8f5fc9a657f2eb5" style="width: 100.0%; height: 100.0%;">드라이버탁구장</div>`)[0];
+            popup_11bccfd00f694746a7e97a7285bf2636.setContent(html_c66c1995fd4d4289b8f5fc9a657f2eb5);
         
 
-        marker_2bcbe19630794a609425a675189617db.bindPopup(popup_84ca20fa5f16448285aa0c0bf479e78c)
+        marker_97a4d5abfa154769937565ec8baba242.bindPopup(popup_11bccfd00f694746a7e97a7285bf2636)
+        ;
+
+        
+    
+    
+            var marker_17ba69071125487eb3ad7002be3c618b = L.marker(
+                [35.2322829149026, 129.08497872900801],
+                {}
+            ).addTo(map_fcf90bc51c5241a19e56930590a38ecb);
+        
+    
+            var icon_c43b417761bb457da82100d03224fa3c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "thumbs-up", "iconColor": "white", "markerColor": "darkgreen", "prefix": "glyphicon"}
+            );
+            marker_17ba69071125487eb3ad7002be3c618b.setIcon(icon_c43b417761bb457da82100d03224fa3c);
+        
+    
+        var popup_9204eefeba124ea580e7aa59b18844e5 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_019f2cccec354cdfbbf9dc2b6ed56891 = $(`<div id="html_019f2cccec354cdfbbf9dc2b6ed56891" style="width: 100.0%; height: 100.0%;">엘리트탁구장</div>`)[0];
+            popup_9204eefeba124ea580e7aa59b18844e5.setContent(html_019f2cccec354cdfbbf9dc2b6ed56891);
+        
+
+        marker_17ba69071125487eb3ad7002be3c618b.bindPopup(popup_9204eefeba124ea580e7aa59b18844e5)
         ;
 
         
