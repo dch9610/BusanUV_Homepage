@@ -41,6 +41,10 @@ def review():
     # **kargs
     return render_template('subpage/review.html', name='사용자명')
 
+@app.route('/review_r')
+def review_r():
+    return render_template('modpage/review/review_r.html', name='사용자명')
+
 @app.route('/ad')
 def ad():    
     # 렌더링시 데이터를 전달하고 싶으면 키=값 형태로 파라미터를 추가
@@ -53,6 +57,7 @@ def game():
     # **kargs
     return render_template('subpage/game.html', name='사용자명')
 ########################################
+
 
 
 if __name__ == '__main__':
