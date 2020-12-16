@@ -1,65 +1,64 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 
 <head>
-
   <!-- Head -->
   {% include 'public/head.html' %}
-
 </head>
+
 
 <body>
 
   {% include 'public/nav.html' %}
 
-  <!-- Page Content -->
-    <div class="container">
-      <!-- Page Heading/Breadcrumbs -->
-      <h1 class="mt-4 mb-3"> 리뷰 읽기</h1>
-
-      <!-- Content Row -->
-      <div class="row">
-        <div class="col-lg-2 mb-2">
-          <div class="card h-15">
-            <a class="card-header" href="{{url_for('review')}}">리뷰작성
-            </a>
-          </div>
-          <div class="card h-15">
-            <a class="card-header" href="{{url_for('review_r)}}">리뷰보기
-            </a>
-          </div>
+  <div class="container">
+    <!-- Page Heading/Breadcrumbs -->
+    <h1 class="mt-4 mb-3"> 리뷰 보기</h1>
+    <div class="row">
+      <div class="col-lg-2 mb-2">
+        <div class="card h-15">
+          <a class="card-header" href="{{url_for('review')}}">리뷰작성
+          </a>
         </div>
-        <div>
-            <table border ='1'>
-                <thead>
+        <div class="card h-15">
+          <a class="card-header" href="{{url_for('review_r')}}">리뷰보기
+          </a>
+        </div>
+      </div>
+      <div class="col-lg-10 col-6">
+        <table border ='1'>
+            <thead>
+                <tr>
+                    <th>작성자</th>
+                    <th>가게명</th>
+                    <th>평점</th>
+                    <th>메뉴</th>
+                    <th>가격</th>
+                    <th>후기</th>
+                </tr>
+            </thead>
+
+            <tbody>    
+                {% for review in reviews: %}
                     <tr>
-                        <th>작성자</th>
-                        <th>상호명</th>
-                        <th>별점</th>
-                        <th>메뉴</th>
-                        <th>가격</th>
-                        <th>후기</th>
+                        <td>{{ review.reviewer }}</td>
+                        <td>{{ review.name }}</td>
+                        <td>{{ review.star }}</td>
+                        <td>{{ review.menu }}</td>
+                        <td>{{ review.price }}</td>
+                        <td>{{ review.review }}</td>
                     </tr>
-                </thead>
+                {% endfor %}
+            
+            </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+    {% include 'public/footer.html' %}
+</body>
 
-                <tbody>    
-                    {% for riview in reviews: %}
-                        <tr>
-                            <td>{{ review.reviewer }}</td>
-                            <td>{{ review.name }}</td>
-                            <td>{{ review.star }}</td>
-                            <td>{{ review.menu }}</td>
-                            <td>{{ review.price }}</td>
-                            <td>{{ review.review }}</td>
-                        </tr>
-                    {% endfor %}
-                
-                </tbody>
-            </table>>
+<script src="static/vendor/jquery/jquery.min.js"></script>
+<script src="static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-
-<<<<<<< HEAD
 </html>
-=======
-</html>
->>>>>>> e11cffa953d3b7cf25e71051fb3e71e4d9cc05bd
