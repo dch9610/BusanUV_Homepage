@@ -1,5 +1,5 @@
-from flask import Flask, render_template, request, redirect, url_for, session
-
+from flask import Flask, render_template, request, redirect, url_for, session, jsonify
+from db.db_1 import db_selectNameFood
 
 app = Flask(__name__)
 
@@ -58,6 +58,26 @@ def game():
     return render_template('subpage/game.html', name='사용자명')
 ########################################
 
+#####map#####
+@app.route('/map_cafe')
+def map_cafe():    
+    # 렌더링시 데이터를 전달하고 싶으면 키=값 형태로 파라미터를 추가
+    # **kargs
+    return render_template('modpage/cafe/map_cafe.html')
+
+
+
+
+
+# food #################################
+@app.route('/search')
+def search():
+        keyword = request.args.get('k')
+        rows    = db_selectNameFood(keyword) 
+        return jsonify(rows)
+
+
+########################################
 
 
 if __name__ == '__main__':

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <div>
   <label>작성자</label>
   <input class="enjoy-reviewer"  type="text" style= "text-align:left; width:150px; height:25px; "/><br>
@@ -43,3 +44,50 @@
     </script>
 </li>
 
+=======
+
+<div>
+  <label>작성자</label>
+  <input class="enjoy-reviewer"  type="text" style= "text-align:left; width:150px; height:25px; "/><br>
+</div>
+<div>
+  <form class='form-inline'>
+          <label> 가게명</label> <br>
+          &#160;<input type=text class="enjoy-name" style="width:100px; height:25px" />
+          <label> 별점</label>
+          &#160;<input class="enjoy-star" style="width:100px; height:25px" />
+  </form>
+</div>
+<div>
+  <form class='form-inline'>
+          <label> 종류 &#160;&#160;</label>
+          &#160;<input type="text" class="enjoy-menu" style="width:100px; height:25px" />
+          <label> 가격</label>
+          &#160;<input type="number" class="enjoy-price"
+              style="width:100px; height:25px" /><br>
+  </form>
+  <label> 후기</label>
+  &#160; &#160;<input class="enjoy-review" style="width:450px; height:50px"/>
+</div>
+<li class="list-group-item">
+  <input type='button' onclick="getenjoyInputValue()" value='리뷰 등록' style="color: #FFFAF0; background-color:#00BFFF; border:none;
+  width:100px; height:30px"/>
+    <script type="text/javascript">
+      function getenjoyInputValue(){
+        let enjoyReviewer   = $('.enjoy-reviewer').val()
+        let enjoyName       = $('.enjoy-name').val()
+        let enjoyStar       = $('.enjoy-star').val()
+        let enjoyMenu       = $('.enjoy-menu').val()
+        let enjoyPrice      = $('.enjoy-price').val()
+        let enjoyReview     = $('.enjoy-review').val()
+  
+        alert(enjoyReviewer+
+              enjoyName+
+              enjoyStar+
+              enjoyMenu+
+              enjoyPrice+
+              enjoyReview);
+      }
+    </script>
+</li>
+>>>>>>> e11cffa953d3b7cf25e71051fb3e71e4d9cc05bd
