@@ -1,29 +1,38 @@
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <div>
-  <label>작성자</label>
-  <input class="food-reviewer"  type="text" style= "text-align:left; width:150px; height:25px; "/><br>
+  <form method="post" action="insert.jsp">
+    <label>작성자</label>
+    <input class="food-reviewer"  type="text" name="reviewer" 
+    style= "text-align:left; width:150px; height:25px;" request/><br>
+  </form>
 </div>
 <div>
-  <form class='form-inline'>
+  <form method="post" action="insert.jsp" class='form-inline'>
           <label> 음식점</label><br>
-          <input type=text class="food-name" style="width:100px; height:25px" />
+          <input type=text class="food-name" name="name" 
+          style="width:100px; height:25px" request/>
           <label> 별점</label>
-          <input class="food-star" style="width:100px; height:25px" />
+          <input class="food-star" name="star" 
+          style="width:100px; height:25px" request/>
   </form>
 </div>
 <div>
-  <form class='form-inline'>
+  <form method="post" action="insert.jsp" class='form-inline'>
           <label> 메뉴 &#160;&#160;</label>
-          <input type="text" class="food-menu" style="width:100px; height:25px" />
+          <input type="text" class="food-menu" name="menu" 
+          style="width:100px; height:25px" request/>
           <label> 가격</label>
-          <input type="number" class="food-price"
-              style="width:100px; height:25px" /><br>
+          <input type="number" class="food-price" name="price"
+              style="width:100px; height:25px" request/><br>
   </form>
-  <label> 후기</lavel><br>
-    <input class="food-review" style="width:450px; height:50px"/>
-</div>
+  <form method="post" action="insert.jsp">
+    <label> 후기</lavel><br>
+    <input class="food-review" name="review" style="width:450px; height:50px" request/>
+  </form>
+  </div>
 <li class="list-group-item">
-  <input type='button' onclick="getfoodInputValue()" value='리뷰 등록' style="color: #FFFAF0; background-color:#00BFFF; border:none;
-  width:100px; height:30px"/>
+  <input type='submit' value='리뷰 등록' class="btn btn-primary btn-block"/>
+  <!-- style="color: #FFFAF0; background-color:#00BFFF; border:none; width:100px; height:30px"/> -->
   <script type="text/javascript">
     function getfoodInputValue(){
       let foodReviewer   = $('.food-reviewer').val()
@@ -31,14 +40,9 @@
       let foodStar       = $('.food-star').val()
       let foodMenu       = $('.food-menu').val()
       let foodPrice      = $('.food-price').val()
-      let foodReview     = $('.food-review').val()
-
-      alert(foodReviewer+
-            foodName+
-            foodStar+
-            foodMenu+
-            foodPrice+
-            foodReview);
+      let foodReview     = $('.food-review').val();
     }
   </script>
+  <!-- <script src="../../plugins/jquery/jquery.min.js"></script>
+  <script src="../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script> -->
 </li>
