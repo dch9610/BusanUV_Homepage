@@ -1,18 +1,44 @@
-<div class="col-lg-6 mb-8">
-    <div class="card card-outline-primary h-20">
-      <div class="card-body">
-        <input class = "review-name" style = "width:200px; height:25px" placeholder="작성자"/>
-      </div>
-        <h6>음식점 이름</h6>
-        <input class = "food-name" style = "width:100px; height:25px"/>
-        <h6>메뉴</h6>
-        <input class = "menu" style = "width:100px; height:25px"/></br>
-        <h6>후기</h6>
-        <input class = "review" style = "width:450px; height:30px"/></br>
+<div>
+  <label>작성자</label>
+  <input class="food-reviewer"  type="text" style= "text-align:left; width:150px; height:25px; "/><br>
+</div>
+<div>
+  <form class='form-inline'>
+          <label> 음식점</label><br>
+          <input type=text class="food-name" style="width:100px; height:25px" />
+          <label> 별점</label>
+          <input class="food-star" style="width:100px; height:25px" />
+  </form>
+</div>
+<div>
+  <form class='form-inline'>
+          <label> 메뉴 &#160;&#160;</label>
+          <input type="text" class="food-menu" style="width:100px; height:25px" />
+          <label> 가격</label>
+          <input type="number" class="food-price"
+              style="width:100px; height:25px" /><br>
+  </form>
+  <label> 후기</lavel><br>
+    <input class="food-review" style="width:450px; height:50px"/>
+</div>
+<li class="list-group-item">
+  <input type='button' onclick="getfoodInputValue()" value='리뷰 등록' style="color: #FFFAF0; background-color:#00BFFF; border:none;
+  width:100px; height:30px"/>
+  <script type="text/javascript">
+    function getfoodInputValue(){
+      let foodReviewer   = $('.food-reviewer').val()
+      let foodName       = $('.food-name').val()
+      let foodStar       = $('.food-star').val()
+      let foodMenu       = $('.food-menu').val()
+      let foodPrice      = $('.food-price').val()
+      let foodReview     = $('.food-review').val()
 
-        <li class="list-group-item">
-          <a href="#" class="btn btn-primary">리뷰 등록</a>
-        </li>
-      </ul>
-    </div>
-  </div>
+      alert(foodReviewer+
+            foodName+
+            foodStar+
+            foodMenu+
+            foodPrice+
+            foodReview);
+    }
+  </script>
+</li>

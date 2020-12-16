@@ -1,18 +1,44 @@
-<div class="col-lg-6 mb-8">
-    <div class="card card-outline-primary h-20">
-      <div class="card-body">
-        <input class = "review-name" style = "width:200px; height:25px" placeholder="작성자"/>
-      </div>
-        <h6>카페 이름</h6>
-        <input class = "food-name" style = "width:100px; height:25px"/>
-        <h6>메뉴</h6>
-        <input class = "menu" style = "width:100px; height:25px"/></br>
-        <h6>후기</h6>
-        <input class = "review" style = "width:450px; height:30px"/></br>
+<div>
+  <label>작성자</label>
+  <input class="cafe-reviewer"  type="text" style= "text-align:left; width:150px; height:25px; "/><br>
+</div>
+<div>
+  <form class='form-inline'>
+          <label> 가게명</label><br>
+          <input type=text class="cafe-name" style="width:100px; height:25px" />
+          <label> 별점</label>
+          <input class="cafe-star" style="width:100px; height:25px" />
+  </form>
+</div>
+<div>
+  <form class='form-inline'>
+          <label> 메뉴 &#160;&#160;</label>
+          <input type="text" class="cafe-menu" style="width:100px; height:25px" />
+          <label> 가격</label>
+          <input type="number" class="cafe-price"
+              style="width:100px; height:25px" /><br>
+  </form>
+  <label> 후기</lavel><br>
+    <input class="cafe-review" style="width:450px; height:50px"/>
+</div>
+<li class="list-group-item">
+  <input type='button' onclick="getcafeInputValue()" value='리뷰 등록' style="color: #FFFAF0; background-color:#00BFFF; border:none;
+  width:100px; height:30px"/>
+  <script type="text/javascript">
+    function getcafeInputValue(){
+      let cafeReviewer = $('.cafe-reviewer').val()
+      let cafeName       = $('.cafe-name').val()
+      let cafeStar       = $('.cafe-star').val()
+      let cafeMenu       = $('.cafe-menu').val()
+      let cafePrice      = $('.cafe-price').val()
+      let cafereview     = $('.cafe-review').val()
 
-        <li class="list-group-item">
-          <a href="#" class="btn btn-primary">리뷰 등록</a>
-        </li>
-      </ul>
-    </div>
-  </div>
+      alert(cafeReviewer+
+            cafeName+
+            cafeStar+
+            cafeMenu+
+            cafePrice+
+            cafereview);
+    }
+  </script>
+</li>
