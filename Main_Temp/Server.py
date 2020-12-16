@@ -1,5 +1,5 @@
-from flask import Flask, render_template, request, redirect, url_for, session
-
+from flask import Flask, render_template, request, redirect, url_for, session, jsonify
+from db.db_1 import db_selectNameFood
 
 app = Flask(__name__)
 
@@ -54,6 +54,15 @@ def game():
     return render_template('subpage/game.html', name='사용자명')
 ########################################
 
+# food #################################
+@app.route('/search')
+def search():
+        keyword = request.args.get('k')
+        rows    = db_selectNameFood(keyword) 
+        return jsonify(rows)
+
+
+########################################
 
 if __name__ == '__main__':
     app.run(debug=True)
