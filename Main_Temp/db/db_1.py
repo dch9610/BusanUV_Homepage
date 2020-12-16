@@ -17,7 +17,7 @@ def db_selectNameFood( keyword ):
         with conn.cursor( ) as cursor:
             # 파라미터를 무조건 execute()를 통해서 넣을 필요는 없다
             sql ='''
-                SELECT * FROM food_p WHERE middle_clasificar like '%{}%';
+                SELECT * FROM food WHERE 분류 like '%{}%';
             '''.format(keyword)
             cursor.execute(sql)
             rows =cursor.fetchall()
@@ -47,7 +47,7 @@ def db_selectFoodByName( name ):
         # ---------------------------------
         with conn.cursor( ) as cursor:
             sql ='''
-                    SELECT * FROM food_p WHERE name = %s; 
+                    SELECT * FROM food WHERE 가게명 = %s; 
             '''
             cursor.execute(sql, name)
             row =cursor.fetchone()
@@ -58,4 +58,3 @@ def db_selectFoodByName( name ):
             conn.close()
 
     return row
-
