@@ -1,81 +1,99 @@
 <body>
-<!-- Bootstrap core JavaScript -->
-<script src="static/vendor/jquery/jquery.min.js"></script>
-<script src="static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <!-- Page Content -->
-  <div class="container">
 
-    <!-- Portfolio Item Heading -->
-    <h1 class="my-4">카페 조회 페이지 입니다!
-      <small>룰루랄라</small>
-    </h1>
-
-    <!-- Portfolio Item Row -->
-    <div class="row">
-      <div class="col-md-7">
-        <fieldset>
-          <form>
-            <select name="select_cafe">
-              <option value="" selected>-- 선택 --</option>
-              <option value="정문">정문</option>
-              <option value="북문">북문</option>
-              <option value="지하철부근">지하철 부근</option>
-            </select>
-            <button id='searchBtn'>조회</button>
-          </form>
-        </fieldset>
-
-        <div class="card">
-          <div class="card-header">
-            <h5 class="card-title">카페 상세정보</h5>
-          </div>
-          
-          
-          <div class="card-body">
-            <form method="POST">
-              <input type="hidden" name="code" value="{{ request.args.get('code') }}">
-              <table class="table table-bordered">
-                <thead>
-                  <tr>
-                    <th>분류</th>
-                    <th>내용</th>
-                  </tr>
-                </thead>
-                <tbody>
-                </tbody>
-              </table>
-            </form>
-          </div>
-          <!-- /.card-body -->
-        </div>
-      </div>
-
-
-      <div class="col-md-5">
-        <script>
-          $(document).ready(function(e) {
-          /* a요소를 클릭 했을 시 */
-              $('a').click(function(){
-          /* iframe 요소의 src 속성값을 a 요소의 data-url 속성값으로 변경 */ 
-                  $('#iframe').attr('src',$(this).attr('data-url'));
-                  })
-          });
+    <!-- Page Content -->
+    <div class="container">
+  
+      <!-- Portfolio Item Heading -->
+      <br>
+      <h1 class="my-4">카페 조회</h1>
+      <h5>부산대 주변의 다양한 카페를 만나보세요!</h5><br>
+  
+      <!-- Portfolio Item Row -->
+      <div class="row">
+        <div class="col-md-7">
+          <fieldset>
+            <form>
+              분류
+              <select name="keyword" id="keyword">
+                  <option value="" selected>-- 선택 --</option>
+                  <option value="부산대정문부근">부산대 정문 부근</option>
+                  <option value="부산대북문부근">부산대 북문 부근</option>
+                  <option value="부산대역 부근">부산대역 부근</option>
+              </select>
+              <input type='submit' value='조회'/>
+            </form><br>
+            <section style="width: 100%; height:300px; overflow: auto; ">
+              <ul id='results'> 
+              </ul>
+            </section>
+          </fieldset>
+          <script>
+            $('form').on('submit', (evt)=>{
+                evt.preventDefault()
+                console.log('이벤트를 인터셉트 했다')
+                let param = $( '[name=keyword]').val() // 검색어 획득
+                $.get({
+                    url:'/search_cafe',       // 서버 주소
+                    data : 'k=' +param,  // 검색어 파라미터, 키=값
+                    dataType:'json',     // json형식으로 보내주세요(xml, txt)
+                    success:(res)=>{     // 통신성공 후 처리할 일 구현(함수)
+                        // console.log('성공', res)
+                        // 1. ul을 특정한다. 그리고 자식들을 비운다
+                        $('#results').empty()
+                        // 2. 데이터를 한 개씩 꺼내서, ul의 자식으로 동적 추가
+                        let keyword = $('[name=keyword]').val() // 검색어
+                        $.each(res, (idx, cafe)=>{
+                            console.log(idx, cafe)
+                            // 3. 자식의 형태를 만든다
+                            let html = `<li>${cafe.가게명}</li>` // js 문자열 포멧팅
+                            // 4. 자식으로 추가
+                            $('#results').append(html)
+                            // 4-1. 클릭 이벤트 연결
+                            // 계속 li가 추가되면 last(막내)가 계속 바뀐다!! => 의사결정 셀렉터 사용
+                            $('#results>li:last').on('click', ()=>{
+                                document.location.href='{{url_for("cafe_detail")}}?r=1&name=' + cafe.가게명
+                            })
+                        })
+                        // 5. 검색어 삭제
+                        $( '[name=keyword]').val('')
+                    },                   
+                    error:(err)=>{         // 통신실패
+                        console.log('실패', err)
+                    }                   
+                })
+                return false // submit 이벤트 kill
+            })
           </script>
-          
-          <a  data-url="{{url_for('map_cafe_front')}}">정문</a>
-          <a  data-url="{{url_for('map_cafe_north')}}">북문</a>
-          <a  data-url="{{url_for('map_cafe_sub')}}">지하철</a>
+        </div>
 
-          <iframe id="iframe" width="450" height="400" src="{{url_for('map')}}"></iframe>
-
+        <div class="col-md-5">
+          <script>
+            $(document).ready(function (e) {
+              /* a요소를 클릭 했을 시 */
+              $('a').click(function () {
+                /* iframe 요소의 src 속성값을 a 요소의 data-url 속성값으로 변경 */
+                $('#iframe').attr('src', $(this).attr('data-url'));
+              })
+            });
+          </script>
+  
+          <a data-url="{{url_for('map_cafe_front')}}">정문</a>
+          <a data-url="{{url_for('map_cafe_north')}}">북문</a>
+          <a data-url="{{url_for('map_cafe_sub')}}">지하철</a>
+  
+          <div class='videowrapper'>
+            <iframe id="iframe" width="450" height="400" src="{{url_for('map')}}"></iframe>
+          </div>
+  
+  
+        </div>
+  
+  
       </div>
-
-
+  
     </div>
-
-  </div>
-  <!-- /.container -->
-  <script src="static/vendor/jquery/jquery.min.js"></script>
-  <script src="static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script> 
-
-</body>
+    <!-- /.container -->
+    <script src="static/vendor/jquery/jquery.min.js"></script>
+    <script src="static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  
+  </body>

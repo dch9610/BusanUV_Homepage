@@ -4,29 +4,33 @@
   <div class="container">
 
     <!-- Portfolio Item Heading -->
-    <h1 class="my-4">음식점 조회 페이지 입니다!
-      <small>룰루랄라</small>
-    </h1>
+    <br>
+    <h1 class="my-4">음식점 조회</h1>
+    <h5>부산대 주변의 다양한 음식점을 만나보세요!</h5><br>
 
     <!-- Portfolio Item Row -->
     <div class="row">
       <div class="col-md-7">
         <fieldset>
           <form>
+            분류
             <select name="keyword" id="keyword">
                 <option value="" selected>-- 선택 --</option>
                 <option value="한식">한식</option>
                 <option value="양식">양식</option>
-                <option value="닭/오리요리">닭/오리요리</option>
-                <option value="일식/수산물">일식/수산물</option>
-                <option value="분식">분식</option>
-                <option value="패스트푸드">패스트푸드</option>
                 <option value="중식">중식</option>
+                <option value="분식">분식</option>
+                <option value="닭/오리요리">치킨</option>
+                <option value="제과제빵떡케익">빵&떡</option>
+                <option value="유흥주점">유흥주점</option>
+                <option value="기타음식업">기타</option>
             </select>
             <input type='submit' value='조회'/>
-          </form>
-          <ul id='results'>
-          </ul>
+          </form><br>
+          <section style="width: 100%; height:300px; overflow: auto; ">
+            <ul id='results'> 
+            </ul>
+          </section>
         </fieldset>
         <script>
           $('form').on('submit', (evt)=>{
@@ -34,7 +38,7 @@
               console.log('이벤트를 인터셉트 했다')
               let param = $( '[name=keyword]').val() // 검색어 획득
               $.get({
-                  url:'/search',       // 서버 주소
+                  url:'/search_food',       // 서버 주소
                   data : 'k=' +param,  // 검색어 파라미터, 키=값
                   dataType:'json',     // json형식으로 보내주세요(xml, txt)
                   success:(res)=>{     // 통신성공 후 처리할 일 구현(함수)
@@ -46,9 +50,14 @@
                       $.each(res, (idx, food)=>{
                           console.log(idx, food)
                           // 3. 자식의 형태를 만든다
-                          let html = `<li>${food.name}</li>` // js 문자열 포멧팅
+                          let html = `<li>${food.가게명}</li>` // js 문자열 포멧팅
                           // 4. 자식으로 추가
                           $('#results').append(html)
+                          // 4-1. 클릭 이벤트 연결
+                          // 계속 li가 추가되면 last(막내)가 계속 바뀐다!! => 의사결정 셀렉터 사용
+                          $('#results>li:last').on('click', ()=>{
+                              document.location.href='{{url_for("food_detail")}}?r=1&name=' + food.가게명
+                          })
                       })
                       // 5. 검색어 삭제
                       $( '[name=keyword]').val('')
@@ -60,11 +69,7 @@
               return false // submit 이벤트 kill
           })
         </script>
-          
-          <!-- <iframe name="detail" style="width:100%; height:300px; border:none"></iframe> -->
       </div>
-
-      
       <div class="col-md-5">
        <script>
         $(document).ready(function(e) {
@@ -83,10 +88,10 @@
         <a  data-url="{{url_for('map_enjoy')}}">주점</a>
         <a  data-url="{{url_for('map_chicken')}}">치킨</a>
         <a  data-url="{{url_for('map_bread')}}">빵집</a>
-        <iframe id="iframe" width="450" height="400" src="{{url_for('map')}}"></iframe>
+        <div class = 'videowrapper'>
+          <iframe id="iframe" width="450" height="400" src="{{url_for('map')}}"></iframe>
+        </div>
       </div>
-
-
     </div>
     <h3 class="my-4"></h3>
   </div>

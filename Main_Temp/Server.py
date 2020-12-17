@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request, redirect, url_for, session, jsonify
-from db.db_1 import db_selectNameFood
+from db.db_1 import *
 
 app = Flask(__name__)
 
@@ -12,7 +12,6 @@ def home():
 def about():    
     return render_template('about.html', name='사용자명')
 
- 
 
 # SubPage######################
 @app.route('/food')
@@ -106,12 +105,48 @@ def map_video():
 
 
 # food #################################
-@app.route('/search')
-def search():
+@app.route('/search_food')
+def search_food():
         keyword = request.args.get('k')
         rows    = db_selectNameFood(keyword) 
         return jsonify(rows)
 
+@app.route('/food_detail')
+def food_detail():
+        return render_template( 'subpage/food_detail.html', 
+                                r=request.args.get('r'), 
+                                food=db_selectFoodByName( name=request.args.get('name') )
+        )
+
+# cafe #################################
+
+@app.route('/search_cafe')
+def search_cafe():
+        keyword = request.args.get('k')
+        rows    = db_selectNameCafe(keyword) 
+        return jsonify(rows)
+
+@app.route('/cafe_detail')
+def cafe_detail():
+        return render_template( 'subpage/cafe_detail.html', 
+                                r=request.args.get('r'), 
+                                cafe=db_selectCafeByName( name=request.args.get('name') )
+        )
+
+# enjoy #################################
+
+@app.route('/search_enjoy')
+def search_enjoy():
+        keyword = request.args.get('k')
+        rows    = db_selectNameEnjoy(keyword) 
+        return jsonify(rows)
+
+@app.route('/enjoy_detail')
+def enjoy_detail():
+        return render_template( 'subpage/enjoy_detail.html', 
+                                r=request.args.get('r'), 
+                                enjoy=db_selectEnjoyByName( name=request.args.get('name') )
+        )
 
 ########################################
 

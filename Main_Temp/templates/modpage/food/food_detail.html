@@ -1,0 +1,43 @@
+<div class="container">
+    <br>
+    <br>
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <!-- 가게의 상세 정보를 보는 부분 -->
+                <div class="col-md-12">
+                    <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title"><center>음식점 상세정보</center></h3>
+                    </div>
+                    <!-- /.card-header -->
+                    <div class="card-body">
+                        <!-- <form method="POST"> -->
+                        <input type="hidden" name="name" value="{{ request.args.get('name') }}"/>
+                        <table class="table table-bordered">
+                            <thead>
+                            <tr>
+                                <th><center>분류</center></th>
+                                <th><center>내용</center></th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            {% for key, value in food.items(): %}
+                            <tr>
+                                <td><center>{{key}}</center></td>
+                                {% if r == '1' %}
+                                <td><center>{{value}}</center></td>
+                                {% endif %}
+                            </tr>
+                            {% endfor %}
+                            </tbody>
+                        </table>
+                        <!-- </form> -->
+                    </div>
+                    <!-- /.card-body -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
