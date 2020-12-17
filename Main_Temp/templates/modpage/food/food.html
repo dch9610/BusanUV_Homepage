@@ -27,9 +27,9 @@
             </select>
             <input type='submit' value='조회'/>
           </form><br>
-          <section style="width: 100%; height: 300px; float:left; overflow: auto; margin: lem">
-            <ul id="results">
-            </ul>
+          <section style="width: 100%; height:370px; overflow: auto;">
+            <ol id='results'> 
+            </ol>
           </section>
         </fieldset>
         <script>
@@ -70,24 +70,37 @@
           })
         </script>
       </div>
+
       <div class="col-md-5">
-        <img class="img-fluid" src="http://placehold.it/750x500" alt="">
+        <script>
+          $(document).ready(function(e) {
+        /* a요소를 클릭 했을 시 */
+            $('a').click(function(){
+        /* iframe 요소의 src 속성값을 a 요소의 data-url 속성값으로 변경 */ 
+                $('#iframe').attr('src',$(this).attr('data-url'));
+                })
+        });
+        </script>
+        
+        <a  data-url="{{url_for('map_han')}}">한식</a>
+        <a  data-url="{{url_for('map_yang')}}">양식</a>
+        <a  data-url="{{url_for('map_bun')}}">분식</a>
+        <a  data-url="{{url_for('map_jung')}}">중식</a>
+        <a  data-url="{{url_for('map_enjoy')}}">주점</a>
+        <a  data-url="{{url_for('map_chicken')}}">치킨</a>
+        <a  data-url="{{url_for('map_bread')}}">빵집</a>
+        
+        <div class='videowrapper'>
+          <iframe id='iframe' src="{{url_for('map')}}"></iframe>
+        </div>
+        <hr>
       </div>
+
     </div>
-    <h3 class="my-4"></h3>
   </div>
   <!-- /.container -->  
 
-  <!-- Footer -->
-  <footer class="py-5 bg-dark">
-    <div class="container">
-      <p class="m-0 text-center text-white">Copyright &copy; Your Website 2020</p>
-    </div>
-    <!-- /.container -->
-  </footer>
-
-  <!-- Bootstrap core JavaScript -->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="static/vendor/jquery/jquery.min.js"></script>
+  <script src="static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script> 
 
 </body>

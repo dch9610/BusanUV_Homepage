@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 
 <head>
+  
 
   <!-- Head -->
   {% include 'public/head.html' %}
@@ -15,44 +17,32 @@
   <!-- Page Content -->
   <div class="container">
     <!-- Page Heading/Breadcrumbs -->
-    <h1 class="mt-4 mb-3"> 리뷰 Page</h1>
-    <div class= 'col-sm-6'>
-      <ul class="nav nav-pills nav-justified">
-        <li class="active">
-          <a href="/templates/modpage/review/review_food.html" data-toggle="tab">음식</a>
-        </li>
-        <li>
-          <a href="/templates/modpage/review/review_cafe.html" data-toggle="tab">카페</a>
-        </li>
-        <li>
-          <a href="/templates/modpage/review/review_enjoy.html" data-toggle="tab" >놀거리</a>
-        </li>
-      </ul>
-    </div>
+    <h1 class="mt-4 mb-3"> 리뷰 </h1>
+
     <!-- Content Row -->
     <div class="row">
       <div class="col-lg-2 mb-2">
-        <div class="card h-10">
-          <a class="card-header" href="{{url_for('review')}}">리뷰작성</a>
+        <div class="card h-15">
+          <a class="card-header" href="{{url_for('review')}}">리뷰작성
+          </a>
         </div>
-        <div class="card h-10">
-            <a class="card-header" href=# >리뷰보기</a>
-          </div>
+        <div class="card h-15">
+          <a class="card-header" href="{{url_for('review_r')}}">리뷰보기
+          </a>
+        </div>
       </div>
-      {% include 'modpage/review/review_w.html' %}
+      <div class="col-lg-10 mb-10">
+        {% include 'subpage/tap-menu.html' %}
+      </div>
     </div>
     <!-- /.row -->
 
   </div>
-  <!-- /.container -->
 
   <!-- Footer -->
   {% include 'public/footer.html' %}
 
-  <!-- Bootstrap core JavaScript -->
-  <script src="static/vendor/jquery/jquery.min.js"></script>
-  <script src="static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
 </body>
+
 
 </html>

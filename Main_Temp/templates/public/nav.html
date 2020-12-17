@@ -1,34 +1,38 @@
-  <!-- Navigation -->
-  <nav class="py-1 navbar navbar-expand-sm navbar-dark bg-dark fixed-top">
-    <div class="container">
-      <a href="{{url_for('home')}}">
-        <img src='/static/images/logo.png' alt='WITH부산대' width ='160px' height="60">
+<!-- Navigation -->
+<nav class="py-1 navbar navbar-expand-sm navbar-dark bg-dark fixed-top">
+  <div class="container">
+    <a href="{{url_for('home')}}">
+      <img src='/static/images/logo.png' alt='WITH부산대' width='160px' height="60">
 
-      </a>
-      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="{{url_for('about')}}">소개</a>
-          </li>
+    </a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+      data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+      aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="{{url_for('about')}}">소개</a>
+        </li>
 
 
 
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPages" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Other Pages
-            </a>
-            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPages">
-              <a class="dropdown-item" href="{{url_for('food')}}">음식점</a>
-              <a class="dropdown-item" href="{{url_for('cafe')}}">카페</a>
-              <a class="dropdown-item" href="{{url_for('enjoy')}}">놀거리</a>
-              <a class="dropdown-item" href="{{url_for('review')}}">리뷰</a>
-              <a class="dropdown-item" href="{{url_for('game')}}">미니 게임</a>
-            </div>
-          </li>
-        </ul>
-      </div>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPages" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Other Pages
+          </a>
+          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPages">
+            <a class="dropdown-item" href="{{url_for('food')}}">음식점</a>
+            <a class="dropdown-item" href="{{url_for('cafe')}}">카페</a>
+            <a class="dropdown-item" href="{{url_for('enjoy')}}">놀거리</a>
+            <a class="dropdown-item" href="{{url_for('review')}}">리뷰</a>
+            <a class="dropdown-item" href="{{url_for('promote')}}">홍보관</a>
+            <a class="dropdown-item" href="{{url_for('game')}}">미니 게임</a>
+          </div>
+        </li>
+      </ul>
     </div>
-  </nav>
+  </div>
+</nav>

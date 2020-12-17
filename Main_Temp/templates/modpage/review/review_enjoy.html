@@ -1,18 +1,29 @@
-<div class="col-lg-6 mb-8">
-    <div class="card card-outline-primary h-20">
-      <div class="card-body">
-        <input class = "review-name" style = "width:200px; height:25px" placeholder="작성자"/>
-      </div>
-        <h6>가게명</h6>
-        <input class = "food-name" style = "width:100px; height:25px"/>
-        <h6>메뉴</h6>
-        <input class = "menu" style = "width:100px; height:25px"/></br>
-        <h6>후기</h6>
-        <input class = "review" style = "width:450px; height:30px"/></br>
 
-        <li class="list-group-item">
-          <a href="#" class="btn btn-primary">리뷰 등록</a>
-        </li>
-      </ul>
-    </div>
+<script src="/static/js/common.js"></script>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<form method="post">
+  <div>
+    <label>작성자</label>
+    &#160;<input class="reviewer" type="text" name="reviewer" style="text-align:left; width:150px; height:25px; " /><br>
   </div>
+  <div>
+    <label> 가게명</label>
+    &#160;<input type=text class="name"  name="name" style="width:100px; height:25px" />
+    <label> 평점</label>
+    <input class="star" name="star" style="width:100px; height:25px" placeholder="1~10" />
+
+  </div>
+  <div>
+
+    <label> 종류 &#160;&#160;</label>
+    &#160;<input type="text" class="menu" name="menu" style="width:100px; height:25px" />
+    <label> 가격</label>
+    <input type="number" class="price"  name="price" style="width:100px; height:25px" /><br>
+    
+    <label> 후기</label>
+    &#160; &#160;<input class="review" name="review" style="width:450px; height:50px" />
+  </div>
+  <br>
+  <button type='submit' onclick="review()" class="btn btn-primary btn-block" style= "width:150px; height:50px">리뷰 등록</button>
+</form>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Head -->
+  {% include 'public/head.html' %}
+</head>
+
+
+<body>
+
+  {% include 'public/nav.html' %}
+
+  <div class="container">
+    <!-- Page Heading/Breadcrumbs -->
+    <h1 class="mt-4 mb-3"> 홍보 모아보기</h1>
+    <div class="row">
+      <div class="col-lg-2 col-md-3 col-sm-4 col-xs-12">
+        <div class="card h-15">
+          <a class="card-header" href="{{url_for('promote')}}">우리가게 홍보
+          </a>
+        </div>
+        <div class="card h-15">
+          <a class="card-header" href="{{url_for('promote_r')}}">홍보관
+          </a>
+        </div>
+      </div>
+      <div class="col-lg-10 col-md-9 col-sm-8 col-xs-12">
+        <table border ='1'>
+            <thead>
+                <tr>
+                    <th width="100px" ><center>가게명</center></th>
+                    <th width="100px"><center>대표 메뉴</center></th>
+                    <th width="400px"><center>우리가게는 이렇습니다</center></th>
+                </tr>
+            </thead>
+
+            <tbody>    
+                {% for promote in promotes: %}
+                    <tr>
+                        <td><center>{{ promote.promoter }}</center></td>
+                        <td><center>{{ promote.menu }}</center></td>
+                        <td><center>{{ promote.promote }}</center></td>
+                    </tr>
+                {% endfor %}
+            
+            </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+    {% include 'public/footer.html' %}
+</body>
+
+</html>

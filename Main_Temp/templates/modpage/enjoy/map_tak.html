@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://rawcdn.githack.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css"/>
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_fcf90bc51c5241a19e56930590a38ecb {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_fcf90bc51c5241a19e56930590a38ecb" ></div>
+        
+</body>
+<script>    
+    
+            var map_fcf90bc51c5241a19e56930590a38ecb = L.map(
+                "map_fcf90bc51c5241a19e56930590a38ecb",
+                {
+                    center: [35.23163594252489, 129.08397894144363],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 17,
+                    zoomControl: true,
+                    preferCanvas: false,
+                    laocation: [35.23163594252489, 129.08397894144363],
+                    zoomSize: 1,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_d4737f6fc0264c4aa211ac410b92b37b = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_fcf90bc51c5241a19e56930590a38ecb);
+        
+    
+            var marker_97a4d5abfa154769937565ec8baba242 = L.marker(
+                [35.2313580508101, 129.084581915373],
+                {}
+            ).addTo(map_fcf90bc51c5241a19e56930590a38ecb);
+        
+    
+            var icon_d9fd447250de41bca35028789dbb7e82 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "thumbs-up", "iconColor": "white", "markerColor": "darkgreen", "prefix": "glyphicon"}
+            );
+            marker_97a4d5abfa154769937565ec8baba242.setIcon(icon_d9fd447250de41bca35028789dbb7e82);
+        
+    
+        var popup_11bccfd00f694746a7e97a7285bf2636 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c66c1995fd4d4289b8f5fc9a657f2eb5 = $(`<div id="html_c66c1995fd4d4289b8f5fc9a657f2eb5" style="width: 100.0%; height: 100.0%;">드라이버탁구장</div>`)[0];
+            popup_11bccfd00f694746a7e97a7285bf2636.setContent(html_c66c1995fd4d4289b8f5fc9a657f2eb5);
+        
+
+        marker_97a4d5abfa154769937565ec8baba242.bindPopup(popup_11bccfd00f694746a7e97a7285bf2636)
+        ;
+
+        
+    
+    
+            var marker_17ba69071125487eb3ad7002be3c618b = L.marker(
+                [35.2322829149026, 129.08497872900801],
+                {}
+            ).addTo(map_fcf90bc51c5241a19e56930590a38ecb);
+        
+    
+            var icon_c43b417761bb457da82100d03224fa3c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "thumbs-up", "iconColor": "white", "markerColor": "darkgreen", "prefix": "glyphicon"}
+            );
+            marker_17ba69071125487eb3ad7002be3c618b.setIcon(icon_c43b417761bb457da82100d03224fa3c);
+        
+    
+        var popup_9204eefeba124ea580e7aa59b18844e5 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_019f2cccec354cdfbbf9dc2b6ed56891 = $(`<div id="html_019f2cccec354cdfbbf9dc2b6ed56891" style="width: 100.0%; height: 100.0%;">엘리트탁구장</div>`)[0];
+            popup_9204eefeba124ea580e7aa59b18844e5.setContent(html_019f2cccec354cdfbbf9dc2b6ed56891);
+        
+
+        marker_17ba69071125487eb3ad7002be3c618b.bindPopup(popup_9204eefeba124ea580e7aa59b18844e5)
+        ;
+
+        
+    
+</script>

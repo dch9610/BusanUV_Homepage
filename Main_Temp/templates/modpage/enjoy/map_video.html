@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://rawcdn.githack.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css"/>
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_1cc4f0ef33264afdbb8498010d3bbac0 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_1cc4f0ef33264afdbb8498010d3bbac0" ></div>
+        
+</body>
+<script>    
+    
+            var map_1cc4f0ef33264afdbb8498010d3bbac0 = L.map(
+                "map_1cc4f0ef33264afdbb8498010d3bbac0",
+                {
+                    center: [35.23163594252489, 129.08397894144363],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 17,
+                    zoomControl: true,
+                    preferCanvas: false,
+                    laocation: [35.23163594252489, 129.08397894144363],
+                    zoomSize: 1,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_6524131cff164cdf84247508d5d44ae9 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_1cc4f0ef33264afdbb8498010d3bbac0);
+        
+    
+            var marker_c983c7b611d44300b1b8ddf72b52d007 = L.marker(
+                [35.2315100381756, 129.085726452967],
+                {}
+            ).addTo(map_1cc4f0ef33264afdbb8498010d3bbac0);
+        
+    
+            var icon_b00d60894a2b47928c0461b5bcbe4bc3 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "thumbs-up", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_c983c7b611d44300b1b8ddf72b52d007.setIcon(icon_b00d60894a2b47928c0461b5bcbe4bc3);
+        
+    
+        var popup_d5fd983ac10d4ca290675b5765c24659 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_bd3e8fafa79446678948e11bef9aada9 = $(`<div id="html_bd3e8fafa79446678948e11bef9aada9" style="width: 100.0%; height: 100.0%;">DVD영화여행</div>`)[0];
+            popup_d5fd983ac10d4ca290675b5765c24659.setContent(html_bd3e8fafa79446678948e11bef9aada9);
+        
+
+        marker_c983c7b611d44300b1b8ddf72b52d007.bindPopup(popup_d5fd983ac10d4ca290675b5765c24659)
+        ;
+
+        
+    
+    
+            var marker_bafc657cc7674938ad43712478882911 = L.marker(
+                [35.2330851062241, 129.089998993407],
+                {}
+            ).addTo(map_1cc4f0ef33264afdbb8498010d3bbac0);
+        
+    
+            var icon_9092f3ccb4324e67b18881d65e1c8e51 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "thumbs-up", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_bafc657cc7674938ad43712478882911.setIcon(icon_9092f3ccb4324e67b18881d65e1c8e51);
+        
+    
+        var popup_adde4158236648beb0a9193ff8800bf6 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_85ecf59830d148a8a26531af42113223 = $(`<div id="html_85ecf59830d148a8a26531af42113223" style="width: 100.0%; height: 100.0%;">아이러브DVD</div>`)[0];
+            popup_adde4158236648beb0a9193ff8800bf6.setContent(html_85ecf59830d148a8a26531af42113223);
+        
+
+        marker_bafc657cc7674938ad43712478882911.bindPopup(popup_adde4158236648beb0a9193ff8800bf6)
+        ;
+
+        
+    
+    
+            var marker_a5060dced2184ea689ea1a8b35f7d5a7 = L.marker(
+                [35.2295200830825, 129.087501554196],
+                {}
+            ).addTo(map_1cc4f0ef33264afdbb8498010d3bbac0);
+        
+    
+            var icon_2b317799b85f4068a9f0c05e9448de6e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "thumbs-up", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_a5060dced2184ea689ea1a8b35f7d5a7.setIcon(icon_2b317799b85f4068a9f0c05e9448de6e);
+        
+    
+        var popup_3e6d5b16f4404ed5803182c484c80c19 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f9075725d5d8496dbc30508b6802e0af = $(`<div id="html_f9075725d5d8496dbc30508b6802e0af" style="width: 100.0%; height: 100.0%;">클럽DVD</div>`)[0];
+            popup_3e6d5b16f4404ed5803182c484c80c19.setContent(html_f9075725d5d8496dbc30508b6802e0af);
+        
+
+        marker_a5060dced2184ea689ea1a8b35f7d5a7.bindPopup(popup_3e6d5b16f4404ed5803182c484c80c19)
+        ;
+
+        
+    
+    
+            var marker_ecb8c8c37ab94ee8aa5e82ddd57ead98 = L.marker(
+                [35.2301448810772, 129.086180642561],
+                {}
+            ).addTo(map_1cc4f0ef33264afdbb8498010d3bbac0);
+        
+    
+            var icon_8ab0e976f8d74c8685bcbf8a5c034f87 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "thumbs-up", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_ecb8c8c37ab94ee8aa5e82ddd57ead98.setIcon(icon_8ab0e976f8d74c8685bcbf8a5c034f87);
+        
+    
+        var popup_e8eab4d5226d4e6d84073b76d48bdfa7 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b23fe886afb74e29a891d372c31cfdd1 = $(`<div id="html_b23fe886afb74e29a891d372c31cfdd1" style="width: 100.0%; height: 100.0%;">영화스케치</div>`)[0];
+            popup_e8eab4d5226d4e6d84073b76d48bdfa7.setContent(html_b23fe886afb74e29a891d372c31cfdd1);
+        
+
+        marker_ecb8c8c37ab94ee8aa5e82ddd57ead98.bindPopup(popup_e8eab4d5226d4e6d84073b76d48bdfa7)
+        ;
+
+        
+    
+</script>

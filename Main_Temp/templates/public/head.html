@@ -4,7 +4,7 @@
 <meta name="description" content="">
 <meta name="author" content="">
 
-<title>Modern Business - Start Bootstrap Template</title>
+<title>부산대 주변 소개</title>
 
 <!-- Bootstrap core CSS-->
 <link href="static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -14,3 +14,32 @@
 
 <!-- Font -->
 <link href="/static/css/font.css" rel="stylesheet" >
+
+<link href="/static/css/iframe.css" rel="stylesheet" >
+
+<!-- <link href="/static/css/iframe.css" rel="stylesheet" > -->
+
+<script src="static/vendor/jquery/jquery.min.js"></script>
+<script src="static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<!-- iframe 링크 설정 -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+<style>
+.videowrapper{
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 비율인 경우 */
+    /* padding-bottom값은 4:3 비율인 경우 75%로 설정합니다 */
+    padding-top: 25px;
+    height: 0;
+    }
+    
+.videowrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 450px;
+    height: 400px;
+}
+</style>

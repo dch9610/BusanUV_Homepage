@@ -1,14 +1,79 @@
-<!-- 탭 메뉴 만들기-->
-<dl>
-    <dt> Menu 1</dt>
-    <dd>
-        첫번째 탭 메뉴 내용
-    </dd>
+<style>
+    .main {
+        min-width: 320px;
+        max-width: 2000px;
+        padding: 20px;
+        border-radius: 7px;
+        ;
+        background: #ffffff;
+    }
+    section {
+        display: none;
+        padding: 20px 0 0;
+        border-top: 1px solid #ddd;
+    }
+    /* input {
+        display: none;
+    } */
+    #tab1 {
+        display: none;
+    }
+    
+    #tab2 {
+        display: none;
+    }
+    
+    #tab3 {
+        display: none;
+    }
+    label {
+        display: inline-block;
+        padding: 15px 25px;
+        font-weight: 600;
+        color: #bbb;
+        border: 1px solid transparent;
+    }
+    label:hover {
+        color: #2e9cdf;
+        cursor: pointer;
+    }
 
-    <dt> Menu 2</dt>
-    <dd class='hidden'>
-        두번째 탭 메뉴
-    </dd>
+    /*input 클릭시, label 스타일*/
+    input:checked+label {
+        color: #555;
+        border: 1px solid #F0F8FF;
+        border-top: 2px solid #2e9cdf;
+        border-bottom: 1px solid #ffffff;
+    }
 
-</dl>
+    #tab1:checked~#content1,
+    #tab2:checked~#content2,
+    #tab3:checked~#content3 {
+        display: block;
+    }
+</style>
 
+<div class="main" style="text-align:left">
+
+    <input id="tab1" type="radio" name="tabs" checked>
+    <label for="tab1"> 음식 리뷰</label>
+
+    <input id="tab2" type="radio" name="tabs">
+    <label for="tab2"> 카페 리뷰</label>
+
+    <input id="tab3" type="radio" name="tabs">
+    <label for="tab3"> 놀거리 리뷰</label>
+
+    <section id="content1">
+        {% include 'modpage/review/review_food.html' %}
+    </section>
+
+    <section id="content2" style="margin-bottom:20px;">
+        {% include 'modpage/review/review_cafe.html' %}
+    </section>
+
+    <section id="content3" style="margin-bottom:20px;">
+        {% include 'modpage/review/review_enjoy.html' %}
+    </section>
+
+</div>
