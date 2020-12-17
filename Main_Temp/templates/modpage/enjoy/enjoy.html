@@ -18,6 +18,7 @@
                 <option value="당구장">당구장</option>
                 <option value="PC방">피씨방</option>
                 <option value="탁구장">탁구장</option>
+                <option value="비디오감상실">비디오</option>
 
             </select>
             <input type='submit' value='조회'/>
@@ -45,10 +46,10 @@
                           // 3. 자식의 형태를 만든다
                           let html = `<li>${food.name}</li>` // js 문자열 포멧팅
                           // 4. 자식으로 추가
-                          $('#results').append(html)
+                          $( '#results' ).append(html)
                       })
                       // 5. 검색어 삭제
-                      $( '[name=keyword]').val('')
+                      $( '[name=keyword]' ).val('')
                   },                   
                   error:(err)=>{         // 통신실패
                       console.log('실패', err)
@@ -76,6 +77,7 @@
         <a  data-url="{{url_for('map_dang')}}">당구장</a>
         <a  data-url="{{url_for('map_pc')}}">PC방</a>
         <a  data-url="{{url_for('map_tak')}}">탁구장</a>
+        <a  data-url="{{url_for('map_video')}}">비디오</a>
 
         <iframe id="iframe" width="450" height="400" src="{{url_for('map')}}"></iframe>
       </div>

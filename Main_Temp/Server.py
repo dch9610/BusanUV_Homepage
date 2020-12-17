@@ -71,11 +71,20 @@ def map_chicken():
 
 @app.route('/map_bread')
 def map_bread():    
-    return render_template('modpage/food/map_bread.html')   
+    return render_template('modpage/food/map_bread.html')
+
 ##########################################################
-@app.route('/map_cafe')
-def map_cafe():    
-    return render_template('modpage/cafe/map_cafe.html')
+@app.route('/map_cafe_front')
+def map_cafe_front():    
+    return render_template('modpage/cafe/map_cafe_front.html')
+
+@app.route('/map_cafe_north')
+def map_cafe_north():    
+    return render_template('modpage/cafe/map_cafe_north.html')
+
+@app.route('/map_cafe_sub')
+def map_cafe_sub():    
+    return render_template('modpage/cafe/map_cafe_sub.html')
 
 #############_------------------------------------------
 @app.route('/map_dang')
@@ -89,6 +98,10 @@ def map_pc():
 @app.route('/map_tak')
 def map_tak():    
     return render_template('modpage/enjoy/map_tak.html')
+
+@app.route('/map_video')
+def map_video():    
+    return render_template('modpage/enjoy/map_video.html')    
 #############_------------------------------------------
 
 
