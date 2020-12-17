@@ -14,8 +14,6 @@
                         </div>
                         <!-- /.card-header -->
                         <div class="card-body">
-                            <!-- <form method="POST"> -->
-                            <input type="hidden" name="name" value="{{ request.args.get('name') }}" />
                             <table class="table table-bordered">
                                 <thead>
                                     <tr>
@@ -46,6 +44,39 @@
                         </div>
                         <!-- /.card-body -->
                     </div>
+                    <br><br>
+                    {% if reviews: %}
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title"><center>리뷰</center></h3>
+                        </div>
+                        <div class="card-body">
+                        <table class="table table-bordered">
+                            <thead width="300px">
+                                <tr>
+                                    <th width="100px"><center>작성자</center></th>
+                                    <th width="100px"><center>가게명</center></th>
+                                    <th width="100px"><center>평점</center></th>
+                                    <th width="100px"><center>메뉴</center></th>
+                                    <th width="100px"><center>가격</center></th>
+                                    <th width="200px"><center>리뷰</center></th>
+                                </tr>
+                            </thead>
+                            <tbody>   
+                                {% for review in reviews: %}
+                                <tr>
+                                    <td><center>{{ review.reviewer }}</center></td>
+                                    <td><center>{{ review.name }}</center></td>
+                                    <td><center>{{ review.star }}</center></td>
+                                    <td><center>{{ review.menu }}</center></td>
+                                    <td><center>{{ review.price }}</center></td>
+                                    <td><center>{{ review.review }}</center></td>
+                                </tr>
+                                {% endfor %} 
+                            </tbody>
+                        </table>
+                    </div>
+                    {% endif %}
                 </div>
             </div>
         </div>

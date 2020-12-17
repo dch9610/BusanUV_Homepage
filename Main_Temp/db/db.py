@@ -104,7 +104,7 @@ def insertDataBusan(  reviewer, name, star, menu, price, review ):
         return '입력에 실패했습니다'
 
 
-def db_selectreviewList( curPageId=1 , onePage_dataNum=5 ):
+def db_selectreviewList( curPageId=1 , onePage_dataNum=10 ):
     conn = None
     rows  = None 
 
@@ -167,7 +167,7 @@ def insert_Prom_data( promoter, name, promote ):
     return result
 
 
-def db_selectpromList( curPageId=1 , onePage_dataNum=5 ):
+def db_selectpromList( curPageId=1 , onePage_dataNum=10):
     conn = None
     rows  = None 
 

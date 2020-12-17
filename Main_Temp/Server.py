@@ -137,8 +137,10 @@ def search_food():
 def food_detail():
         return render_template( 'subpage/food_detail.html', 
                                 r=request.args.get('r'), 
-                                food=db_selectFoodByName( name=request.args.get('name') )
+                                food=db_selectFoodByName( name=request.args.get('name') ),
+                                reviews=db_selectFoodReviewByName(name=request.args.get('name'))
         )
+
 
 # cafe #################################
 
@@ -152,7 +154,8 @@ def search_cafe():
 def cafe_detail():
         return render_template( 'subpage/cafe_detail.html', 
                                 r=request.args.get('r'), 
-                                cafe=db_selectCafeByName( name=request.args.get('name') )
+                                cafe=db_selectCafeByName( name=request.args.get('name') ),
+                                reviews=db_selectCafeReviewByName(name=request.args.get('name'))
         )
 
 # enjoy #################################
@@ -167,7 +170,8 @@ def search_enjoy():
 def enjoy_detail():
         return render_template( 'subpage/enjoy_detail.html', 
                                 r=request.args.get('r'), 
-                                enjoy=db_selectEnjoyByName( name=request.args.get('name') )
+                                enjoy=db_selectEnjoyByName( name=request.args.get('name') ),
+                                reviews=db_selectEnjoyReviewByName(name=request.args.get('name'))
         )
 
 ########################################
