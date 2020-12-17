@@ -49,7 +49,7 @@ def review():
 @app.route('/review_r')
 def review_r():
     curPage = 1 if not request.args.get('pageNo')  else int(request.args.get('pageNo'))
-    amt     = 5 if not request.args.get('amt')  else int(request.args.get('amt'))
+    amt     = 30 if not request.args.get('amt')  else int(request.args.get('amt'))
     rows = db_selectreviewList()
     return render_template('modpage/review/review_r.html', reviews= rows)
 
