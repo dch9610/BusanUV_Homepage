@@ -1,0 +1,86 @@
+<body>
+
+    <!-- Page Content -->
+    <div class="container">
+  
+      <!-- Portfolio Item Heading -->
+      <br>
+      <h1 class="my-4">카페 조회</h1>
+      <h5>부산대 주변의 다양한 카페를 만나보세요!</h5><br>
+  
+      <!-- Portfolio Item Row -->
+      <div class="row">
+        <div class="col-md-7">
+          <fieldset>
+            <form>
+              분류
+              <select name="keyword" id="keyword">
+                  <option value="" selected>-- 선택 --</option>
+                  <option value="부산대 정문 부근">부산대 정문 부근</option>
+                  <option value="부산대 북문 부근">부산대 북문 부근</option>
+                  <option value="부산대역 부근">부산대역 부근</option>
+              </select>
+              <input type='submit' value='조회'/>
+            </form><br>
+            <ul id='results'> 
+            </ul>
+          </fieldset>
+          <script>
+            $('form').on('submit', (evt)=>{
+                evt.preventDefault()
+                console.log('이벤트를 인터셉트 했다')
+                let param = $( '[name=keyword]').val() // 검색어 획득
+                $.get({
+                    url:'/search_cafe',       // 서버 주소
+                    data : 'k=' +param,  // 검색어 파라미터, 키=값
+                    dataType:'json',     // json형식으로 보내주세요(xml, txt)
+                    success:(res)=>{     // 통신성공 후 처리할 일 구현(함수)
+                        // console.log('성공', res)
+                        // 1. ul을 특정한다. 그리고 자식들을 비운다
+                        $('#results').empty()
+                        // 2. 데이터를 한 개씩 꺼내서, ul의 자식으로 동적 추가
+                        let keyword = $('[name=keyword]').val() // 검색어
+                        $.each(res, (idx, cafe)=>{
+                            console.log(idx, cafe)
+                            // 3. 자식의 형태를 만든다
+                            let html = `<li>${cafe.가게명}</li>` // js 문자열 포멧팅
+                            // 4. 자식으로 추가
+                            $('#results').append(html)
+                            // 4-1. 클릭 이벤트 연결
+                            // 계속 li가 추가되면 last(막내)가 계속 바뀐다!! => 의사결정 셀렉터 사용
+                            $('#results>li:last').on('click', ()=>{
+                                document.location.href='{{url_for("cafe_detail")}}?r=1&name=' + cafe.가게명
+                            })
+                        })
+                        // 5. 검색어 삭제
+                        $( '[name=keyword]').val('')
+                    },                   
+                    error:(err)=>{         // 통신실패
+                        console.log('실패', err)
+                    }                   
+                })
+                return false // submit 이벤트 kill
+            })
+          </script>
+        </div>
+        <div class="col-md-5">
+          <img class="img-fluid" src="http://placehold.it/750x500" alt="">
+        </div>
+      </div>
+      <h3 class="my-4"></h3>
+    </div>
+    <!-- /.container -->  
+
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+      <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; Your Website 2020</p>
+      </div>
+      <!-- /.container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+</body>
