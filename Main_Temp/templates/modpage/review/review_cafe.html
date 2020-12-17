@@ -1,47 +1,26 @@
-<div>
-  <label>작성자</label>
-  <input class="cafe-reviewer"  type="text" style= "text-align:left; width:150px; height:25px; "/>
-</div>
-<div>
-  <form class='form-inline'>
-          <label> 가게명</label> <br>
-          &#160;<input type=text class="cafe-name" style="width:100px; height:25px" />
-          <label> 별점</label>
-          &#160;<input class="cafe-star" style="width:100px; height:25px" />
-  </form>
-</div>
-<div>
-  <form class='form-inline'>
-          <label> 메뉴 &#160;&#160;</label>
-          &#160;<input type="text" class="cafe-menu" style="width:100px; height:25px" />
-          <label> 가격</label>
-          &#160;<input type="number" class="cafe-price"
-              style="width:100px; height:25px" /><br>
-  </form>
-  <label> 후기</label>
-  &#160; &#160;<input class="cafe-review" style="width:450px; height:50px"/>
-</div>
-<li class="list-group-item">
-  <input type='button' onclick="getcafeInputValue()" value='리뷰 등록' style="color: #FFFAF0; background-color:#00BFFF; border:none;
-  width:100px; height:30px"/>
-  <script type="text/javascript">
-    function getcafeInputValue(){
-      let cafeReviewer = $('.cafe-reviewer').val()
-      let cafeName       = $('.cafe-name').val()
-      let cafeStar       = $('.cafe-star').val()
-      let cafeMenu       = $('.cafe-menu').val()
-      let cafePrice      = $('.cafe-price').val()
-      let cafereview     = $('.cafe-review').val()
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="/static/js/common.js"></script>
 
-      alert(cafeReviewer+
-            cafeName+
-            cafeStar+
-            cafeMenu+
-            cafePrice+
-            cafereview);
-    }
-  </script>
-  <!-- Bootstrap core JavaScript -->
-  <script src="static/vendor/jquery/jquery.min.js"></script>
-  <script src="static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>  
-</li>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<form method="post">
+  <div>
+    <label>작성자</label>
+    &#160;<input class="reviewer" type="text" name="reviewer" style="text-align:left; width:150px; height:25px; " />
+  </div>
+  <div>
+    <label> 가게명</label>
+    &#160;<input type=text class="name" name="name" style="width:100px; height:25px" />
+    <label> 평점</label>
+    <input class="star" name="star" style="width:100px; height:25px" placeholder="1~10" />
+  </div>
+  <div>
+    <label> 메뉴 &#160;&#160;</label>
+    &#160;<input type="text" class="menu"  name="menu" style="width:100px; height:25px" />
+    <label> 가격</label>
+    <input type="number" class="price"  name="price" style="width:100px; height:25px" /><br>
+    
+    <label> 후기</label>
+    &#160; &#160;<input class="review" name="review" style="width:450px; height:50px" />
+  </div>
+  <br>
+  <button type='submit' onclick="review()" class="btn btn-primary btn-block" style= "width:150px; height:50px">리뷰 등록</button>
