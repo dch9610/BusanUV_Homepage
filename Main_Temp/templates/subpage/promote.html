@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <!-- Head -->
+  {% include 'public/head.html' %}
+
+</head>
+
+<body>
+
+  {% include 'public/nav.html' %}
+
+  <!-- Page Content -->
+  <div class="container">
+    <!-- Page Heading/Breadcrumbs -->
+    <h1 class="mt-4 mb-3"> 홍보를 합시다 </h1>
+
+    <!-- Content Row -->
+    <div class="row">
+      <div class="col-lg-2 col-md-3 col-sm-4 col-xs-12">
+        <div class="card h-15">
+          <a class="card-header" href="{{url_for('promote')}}">우리가게 홍보
+          </a>
+        </div>
+        <div class="card h-15">
+          <a class="card-header" href="{{url_for('promote_r')}}">홍보관
+          </a>
+        </div>
+      </div>
+      <div class="col-lg-10 col-md-9 col-sm-8 col-xs-12 ">
+        {% include 'modpage/promote/promote.html' %}
+      </div>
+    </div>
+    <!-- /.row -->
+
+  </div>
+
+  <!-- Footer -->
+  {% include 'public/footer.html' %}
+
+  <script src="static/vendor/jquery/jquery.min.js"></script>
+  <script src="static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+
+</html>

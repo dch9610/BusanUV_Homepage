@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request, redirect, url_for, session, jsonify
 from db.db_1 import *
-from db.db import insert_data, db_selectreviewList
+from db.db import insert_data, db_selectreviewList, insert_Prom_data, db_selectpromList
 
 app = Flask(__name__)
 
@@ -171,7 +171,31 @@ def enjoy_detail():
         )
 
 ########################################
+########################################
+@app.route('/promote', methods=['GET', 'POST'])
+def promote():
+    if request.method =='GET': 
+        return render_template('subpage/promote.html')
+    else:
+        promoter = request.form.get('promoter')
+        name     = request.form.get('prom_name')
+        promote  = request.form.get('promote')
+        promoters = insert_Prom_data(promoter, name, promote )
 
+        if promoters:  
+            return redirect(url_for('promote')) 
+        else:
+            return render_template('subpage/alert.html')
+
+
+@app.route('/promote_r')
+def promote_r():
+    curPage = 1 if not request.args.get('pageNo')  else int(request.args.get('pageNo'))
+    amt     = 30 if not request.args.get('amt')  else int(request.args.get('amt'))
+    rows = db_selectpromList()
+    return render_template('modpage/promote/promote_r.html', promotes = rows)
+
+#########################################
 
 if __name__ == '__main__':
     app.run(debug=True)
