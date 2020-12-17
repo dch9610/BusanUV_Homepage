@@ -1,5 +1,7 @@
 <body>
-
+<!-- Bootstrap core JavaScript -->
+<script src="static/vendor/jquery/jquery.min.js"></script>
+<script src="static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <!-- Page Content -->
   <div class="container">
 
@@ -15,13 +17,9 @@
           <form>
             <select name="select_cafe">
               <option value="" selected>-- 선택 --</option>
-              <option value="한식">한식</option>
-              <option value="양식">양식</option>
-              <option value="닭/오리요리">닭/오리요리</option>
-              <option value="일식/수산물">일식/수산물</option>
-              <option value="분식">분식</option>
-              <option value="패스트푸드">패스트푸드</option>
-              <option value="중식">중식</option>
+              <option value="정문">정문</option>
+              <option value="북문">북문</option>
+              <option value="지하철부근">지하철 부근</option>
             </select>
             <button id='searchBtn'>조회</button>
           </form>
@@ -54,7 +52,22 @@
 
 
       <div class="col-md-5">
-        <iframe src ="{{url_for('map_cafe')}}" width="450" height="400"></iframe>
+        <script>
+          $(document).ready(function(e) {
+          /* a요소를 클릭 했을 시 */
+              $('a').click(function(){
+          /* iframe 요소의 src 속성값을 a 요소의 data-url 속성값으로 변경 */ 
+                  $('#iframe').attr('src',$(this).attr('data-url'));
+                  })
+          });
+          </script>
+          
+          <a  data-url="{{url_for('map_cafe_front')}}">정문</a>
+          <a  data-url="{{url_for('map_cafe_north')}}">북문</a>
+          <a  data-url="{{url_for('map_cafe_sub')}}">지하철</a>
+
+          <iframe id="iframe" width="450" height="400" src="{{url_for('map')}}"></iframe>
+
       </div>
 
 
@@ -62,6 +75,7 @@
 
   </div>
   <!-- /.container -->
-
+  <script src="static/vendor/jquery/jquery.min.js"></script>
+  <script src="static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script> 
 
 </body>

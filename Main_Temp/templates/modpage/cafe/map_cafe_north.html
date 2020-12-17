@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://rawcdn.githack.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css"/>
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_14848dc1fc394a0fb6f4e7d9c3471955 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_14848dc1fc394a0fb6f4e7d9c3471955" ></div>
+        
+</body>
+<script>    
+    
+            var map_14848dc1fc394a0fb6f4e7d9c3471955 = L.map(
+                "map_14848dc1fc394a0fb6f4e7d9c3471955",
+                {
+                    center: [35.235520, 129.082967],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 17,
+                    zoomControl: true,
+                    preferCanvas: false,
+                    laocation: [35.235520, 129.082967],
+                    zoomSize: 1,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_b1118bbd6231484b9dc21f3af48bc10a = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_14848dc1fc394a0fb6f4e7d9c3471955);
+        
+    
+            var marker_14141732007e4da0b0f53236f73746c6 = L.marker(
+                [35.2359206026603, 129.085411689793],
+                {}
+            ).addTo(map_14848dc1fc394a0fb6f4e7d9c3471955);
+        
+    
+            var icon_ef751a2f91ca4b89beea76c81877b45b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "star", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_14141732007e4da0b0f53236f73746c6.setIcon(icon_ef751a2f91ca4b89beea76c81877b45b);
+        
+    
+        var popup_2b5c8df7b91c4073a67202e667205331 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ca1ddd62c1cc46e28cd3c871b4da165a = $(`<div id="html_ca1ddd62c1cc46e28cd3c871b4da165a" style="width: 100.0%; height: 100.0%;">산뽀</div>`)[0];
+            popup_2b5c8df7b91c4073a67202e667205331.setContent(html_ca1ddd62c1cc46e28cd3c871b4da165a);
+        
+
+        marker_14141732007e4da0b0f53236f73746c6.bindPopup(popup_2b5c8df7b91c4073a67202e667205331)
+        ;
+
+        
+    
+    
+            var marker_937904bfdac5477b8852bc442dc9ddd9 = L.marker(
+                [35.2364250187992, 129.07332239626],
+                {}
+            ).addTo(map_14848dc1fc394a0fb6f4e7d9c3471955);
+        
+    
+            var icon_4f1906c5147c449fa60a23e76ba2290a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "star", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_937904bfdac5477b8852bc442dc9ddd9.setIcon(icon_4f1906c5147c449fa60a23e76ba2290a);
+        
+    
+        var popup_44d23ba511bc4755bc794d0eee7f2a39 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_02249ef6e8134a1d810e8358bf8c2b03 = $(`<div id="html_02249ef6e8134a1d810e8358bf8c2b03" style="width: 100.0%; height: 100.0%;">운죽정북카페</div>`)[0];
+            popup_44d23ba511bc4755bc794d0eee7f2a39.setContent(html_02249ef6e8134a1d810e8358bf8c2b03);
+        
+
+        marker_937904bfdac5477b8852bc442dc9ddd9.bindPopup(popup_44d23ba511bc4755bc794d0eee7f2a39)
+        ;
+
+        
+    
+    
+            var marker_8e133697b5de4698ad0cba78337166a9 = L.marker(
+                [35.2368194004771, 129.083687807114],
+                {}
+            ).addTo(map_14848dc1fc394a0fb6f4e7d9c3471955);
+        
+    
+            var icon_ec42540ff36d4a00b9044c2e9423bd2f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "star", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_8e133697b5de4698ad0cba78337166a9.setIcon(icon_ec42540ff36d4a00b9044c2e9423bd2f);
+        
+    
+        var popup_8a91e5aa4bf44d1bb14271ec82cea9db = L.popup({"maxWidth": "100%"});
+
+        
+            var html_281715e2469c48e68ec8ac589fc2ccf6 = $(`<div id="html_281715e2469c48e68ec8ac589fc2ccf6" style="width: 100.0%; height: 100.0%;">105</div>`)[0];
+            popup_8a91e5aa4bf44d1bb14271ec82cea9db.setContent(html_281715e2469c48e68ec8ac589fc2ccf6);
+        
+
+        marker_8e133697b5de4698ad0cba78337166a9.bindPopup(popup_8a91e5aa4bf44d1bb14271ec82cea9db)
+        ;
+
+        
+    
+    
+            var marker_487d559a0f5e4480aae9fbb60d1ee325 = L.marker(
+                [35.235596485284795, 129.086374163559],
+                {}
+            ).addTo(map_14848dc1fc394a0fb6f4e7d9c3471955);
+        
+    
+            var icon_f520f895ebef4fc88f214c688b6097f4 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "star", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_487d559a0f5e4480aae9fbb60d1ee325.setIcon(icon_f520f895ebef4fc88f214c688b6097f4);
+        
+    
+        var popup_e77161285b74420eb54ec2b891b3be52 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_dd3c3cca55f1498ebe1fc416e92084a2 = $(`<div id="html_dd3c3cca55f1498ebe1fc416e92084a2" style="width: 100.0%; height: 100.0%;">백조</div>`)[0];
+            popup_e77161285b74420eb54ec2b891b3be52.setContent(html_dd3c3cca55f1498ebe1fc416e92084a2);
+        
+
+        marker_487d559a0f5e4480aae9fbb60d1ee325.bindPopup(popup_e77161285b74420eb54ec2b891b3be52)
+        ;
+
+        
+    
+    
+            var marker_970e5dd53e694180a85ebb0e4d3ee5bb = L.marker(
+                [35.237042489748504, 129.082932708303],
+                {}
+            ).addTo(map_14848dc1fc394a0fb6f4e7d9c3471955);
+        
+    
+            var icon_6b15ef64c376460993113ff694041720 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "star", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_970e5dd53e694180a85ebb0e4d3ee5bb.setIcon(icon_6b15ef64c376460993113ff694041720);
+        
+    
+        var popup_955e8767ce06499f91fd873fe7c3daa8 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7c154992112c433d9ff5674c162a46bb = $(`<div id="html_7c154992112c433d9ff5674c162a46bb" style="width: 100.0%; height: 100.0%;">두커피로스터스</div>`)[0];
+            popup_955e8767ce06499f91fd873fe7c3daa8.setContent(html_7c154992112c433d9ff5674c162a46bb);
+        
+
+        marker_970e5dd53e694180a85ebb0e4d3ee5bb.bindPopup(popup_955e8767ce06499f91fd873fe7c3daa8)
+        ;
+
+        
+    
+    
+            var marker_5e934501f4154936a3d35c2943b1be05 = L.marker(
+                [35.238040111275296, 129.084264361273],
+                {}
+            ).addTo(map_14848dc1fc394a0fb6f4e7d9c3471955);
+        
+    
+            var icon_af976dae62e54f8993329ffbd2d720cb = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "star", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_5e934501f4154936a3d35c2943b1be05.setIcon(icon_af976dae62e54f8993329ffbd2d720cb);
+        
+    
+        var popup_7eca55e8b7a3412d8404505d2523408d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_01fb275223954e408c5779e3ecd19aad = $(`<div id="html_01fb275223954e408c5779e3ecd19aad" style="width: 100.0%; height: 100.0%;">로제커피</div>`)[0];
+            popup_7eca55e8b7a3412d8404505d2523408d.setContent(html_01fb275223954e408c5779e3ecd19aad);
+        
+
+        marker_5e934501f4154936a3d35c2943b1be05.bindPopup(popup_7eca55e8b7a3412d8404505d2523408d)
+        ;
+
+        
+    
+    
+            var marker_00b64e27fc154f1eb090270e7108710f = L.marker(
+                [35.23558426563, 129.083715323792],
+                {}
+            ).addTo(map_14848dc1fc394a0fb6f4e7d9c3471955);
+        
+    
+            var icon_7509b63c02ee4e1abea3dffb4722cce8 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "star", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_00b64e27fc154f1eb090270e7108710f.setIcon(icon_7509b63c02ee4e1abea3dffb4722cce8);
+        
+    
+        var popup_2b6f2dc4a3c6465db605541e125cfe71 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_4f5137e3200043efae95028c63938ad5 = $(`<div id="html_4f5137e3200043efae95028c63938ad5" style="width: 100.0%; height: 100.0%;">빈스에스프레소</div>`)[0];
+            popup_2b6f2dc4a3c6465db605541e125cfe71.setContent(html_4f5137e3200043efae95028c63938ad5);
+        
+
+        marker_00b64e27fc154f1eb090270e7108710f.bindPopup(popup_2b6f2dc4a3c6465db605541e125cfe71)
+        ;
+
+        
+    
+    
+            var marker_f569273d69dd4c4388e499b4ca9b7c10 = L.marker(
+                [35.2356345406289, 129.083133719838],
+                {}
+            ).addTo(map_14848dc1fc394a0fb6f4e7d9c3471955);
+        
+    
+            var icon_f36e953e3e73483fa7ac91432c3c75e0 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "star", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_f569273d69dd4c4388e499b4ca9b7c10.setIcon(icon_f36e953e3e73483fa7ac91432c3c75e0);
+        
+    
+        var popup_aa3200e114b94722afb411819da01a75 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_406c0c0a195b45d0b6cab4f6f46246b8 = $(`<div id="html_406c0c0a195b45d0b6cab4f6f46246b8" style="width: 100.0%; height: 100.0%;">엔커피</div>`)[0];
+            popup_aa3200e114b94722afb411819da01a75.setContent(html_406c0c0a195b45d0b6cab4f6f46246b8);
+        
+
+        marker_f569273d69dd4c4388e499b4ca9b7c10.bindPopup(popup_aa3200e114b94722afb411819da01a75)
+        ;
+
+        
+    
+    
+            var marker_f607d4fc1f7743259700e3af94236f2a = L.marker(
+                [35.237821298192, 129.08554687778098],
+                {}
+            ).addTo(map_14848dc1fc394a0fb6f4e7d9c3471955);
+        
+    
+            var icon_a90938ab16e74c898a0784545e66486b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "star", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_f607d4fc1f7743259700e3af94236f2a.setIcon(icon_a90938ab16e74c898a0784545e66486b);
+        
+    
+        var popup_636792cef73c40599c6cc9294d2bb3db = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e66991751fda4d9a9dec47a972d80357 = $(`<div id="html_e66991751fda4d9a9dec47a972d80357" style="width: 100.0%; height: 100.0%;">더리터</div>`)[0];
+            popup_636792cef73c40599c6cc9294d2bb3db.setContent(html_e66991751fda4d9a9dec47a972d80357);
+        
+
+        marker_f607d4fc1f7743259700e3af94236f2a.bindPopup(popup_636792cef73c40599c6cc9294d2bb3db)
+        ;
+
+        
+    
+    
+            var marker_dfe30725620c4900aeb970382258b7f3 = L.marker(
+                [35.2378352413696, 129.08197642730102],
+                {}
+            ).addTo(map_14848dc1fc394a0fb6f4e7d9c3471955);
+        
+    
+            var icon_22177ef9aff544b5b79eb64b550fca90 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "star", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_dfe30725620c4900aeb970382258b7f3.setIcon(icon_22177ef9aff544b5b79eb64b550fca90);
+        
+    
+        var popup_08da7ed84bed48a5b5131934f0e4d752 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f6ffc907145a4ad3a29cede466ad84d4 = $(`<div id="html_f6ffc907145a4ad3a29cede466ad84d4" style="width: 100.0%; height: 100.0%;">릴리앤제이</div>`)[0];
+            popup_08da7ed84bed48a5b5131934f0e4d752.setContent(html_f6ffc907145a4ad3a29cede466ad84d4);
+        
+
+        marker_dfe30725620c4900aeb970382258b7f3.bindPopup(popup_08da7ed84bed48a5b5131934f0e4d752)
+        ;
+
+        
+    
+    
+            var marker_e48cefcbb6ef4bc98c1b7603e7e30645 = L.marker(
+                [35.2377968214424, 129.085260900924],
+                {}
+            ).addTo(map_14848dc1fc394a0fb6f4e7d9c3471955);
+        
+    
+            var icon_93c1ea5335b44a86bd258bc092682c8a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "star", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_e48cefcbb6ef4bc98c1b7603e7e30645.setIcon(icon_93c1ea5335b44a86bd258bc092682c8a);
+        
+    
+        var popup_1c67383ce29f4788a2aae55ac0cb3332 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_121b4b5a0b074ba2a3891aafc02badd1 = $(`<div id="html_121b4b5a0b074ba2a3891aafc02badd1" style="width: 100.0%; height: 100.0%;">다짐스터디카페</div>`)[0];
+            popup_1c67383ce29f4788a2aae55ac0cb3332.setContent(html_121b4b5a0b074ba2a3891aafc02badd1);
+        
+
+        marker_e48cefcbb6ef4bc98c1b7603e7e30645.bindPopup(popup_1c67383ce29f4788a2aae55ac0cb3332)
+        ;
+
+        
+    
+    
+            var marker_e69c3051ef274c4eafea6e19539947b8 = L.marker(
+                [35.2382503602583, 129.085948113493],
+                {}
+            ).addTo(map_14848dc1fc394a0fb6f4e7d9c3471955);
+        
+    
+            var icon_8351f65feeab4705b6f97252d5cb7a60 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "star", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_e69c3051ef274c4eafea6e19539947b8.setIcon(icon_8351f65feeab4705b6f97252d5cb7a60);
+        
+    
+        var popup_04c7c88b2e164fa2998c26320e89172f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c2a19b081ce54a9ba5ef78174e563dc8 = $(`<div id="html_c2a19b081ce54a9ba5ef78174e563dc8" style="width: 100.0%; height: 100.0%;">카페</div>`)[0];
+            popup_04c7c88b2e164fa2998c26320e89172f.setContent(html_c2a19b081ce54a9ba5ef78174e563dc8);
+        
+
+        marker_e69c3051ef274c4eafea6e19539947b8.bindPopup(popup_04c7c88b2e164fa2998c26320e89172f)
+        ;
+
+        
+    
+</script>

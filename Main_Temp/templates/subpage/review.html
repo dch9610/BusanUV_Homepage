@@ -13,35 +13,36 @@
   {% include 'public/nav.html' %}
 
   <!-- Page Content -->
-    <div class="container">
-      <!-- Page Heading/Breadcrumbs -->
-      <h1 class="mt-4 mb-3"> 리뷰</h1>
+  <div class="container">
+    <!-- Page Heading/Breadcrumbs -->
+    <h1 class="mt-4 mb-3"> 리뷰page</h1>
 
-      <!-- Content Row -->
-      <div class="row">
-        <div class="col-lg-2 mb-2">
-          <div class="card h-15">
-            <a class="card-header" href="{{url_for('review')}}">리뷰작성
-            </a>
-          </div>
-          <div class="card h-15">
-            <a class="card-header" href="{{url_for('review_r')}}">리뷰보기
-            </a>
-          </div>
+    <!-- Content Row -->
+    <div class="row">
+      <div class="col-lg-2 mb-2">
+        <div class="card h-15">
+          <a class="card-header" href="{{url_for('review')}}">리뷰작성
+          </a>
         </div>
-        <div class="col-lg-10 mb-10">
-          {% include 'subpage/tap-menu.html' %}
+        <div class="card h-15">
+          <a class="card-header" href="#">리뷰보기
+          </a>
         </div>
       </div>
-      <!-- /.row -->
-
+      <div class="col-lg-10 mb-10">
+        {% include 'subpage/tap-menu.html' %}
+      </div>
     </div>
+    <!-- /.row -->
 
-    <!-- Footer -->
+  </div>
+
+  <!-- Footer -->
   {% include 'public/footer.html' %}
-  <!-- Bootstrap core JavaScript -->
+
   <script src="static/vendor/jquery/jquery.min.js"></script>
   <script src="static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
 </body>
 
 

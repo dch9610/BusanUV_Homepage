@@ -27,9 +27,20 @@
     &#160; &#160;<input class="food-review" name="review" style="width:450px; height:50px" request />
 
   </div>
-  <button type='submit' onclick="review()" class="btn btn-primary btn-block">리뷰 등록</button>
-</form>
-<!-- style="color: #FFFAF0; background-color:#00BFFF; border:none; width:100px; height:30px"/> -->
-
-<!-- <script src="../../plugins/jquery/jquery.min.js"></script>
-  <script src="../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script> -->
+<li class="list-group-item">
+  <input type='submit' value='리뷰 등록' class="btn btn-primary btn-block"/>
+  <!-- style="color: #FFFAF0; background-color:#00BFFF; border:none; width:100px; height:30px"/> -->
+  <script type="text/javascript">
+    function getfoodInputValue(){
+      let foodReviewer   = $('.food-reviewer').val()
+      let foodName       = $('.food-name').val()
+      let foodStar       = $('.food-star').val()
+      let foodMenu       = $('.food-menu').val()
+      let foodPrice      = $('.food-price').val()
+      let foodReview     = $('.food-review').val();
+    }
+  </script>
+  <!-- Bootstrap core JavaScript -->
+  <script src="static/vendor/jquery/jquery.min.js"></script>
+  <script src="static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+</li>

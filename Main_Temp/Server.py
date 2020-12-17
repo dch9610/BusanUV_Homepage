@@ -11,8 +11,6 @@ def home():
 ### 소개 ##############
 @app.route('/about')
 def about():    
-    # 렌더링시 데이터를 전달하고 싶으면 키=값 형태로 파라미터를 추가
-    # **kargs
     return render_template('about.html', name='사용자명')
 
  
@@ -20,20 +18,14 @@ def about():
 # SubPage######################
 @app.route('/food')
 def food():    
-    # 렌더링시 데이터를 전달하고 싶으면 키=값 형태로 파라미터를 추가
-    # **kargs
     return render_template('subpage/food.html', name='사용자명')
 
 @app.route('/cafe')
 def cafe():    
-    # 렌더링시 데이터를 전달하고 싶으면 키=값 형태로 파라미터를 추가
-    # **kargs
     return render_template('subpage/cafe.html', name='사용자명')
 
 @app.route('/enjoy')
 def enjoy():    
-    # 렌더링시 데이터를 전달하고 싶으면 키=값 형태로 파라미터를 추가
-    # **kargs
     return render_template('subpage/enjoy.html', name='사용자명')
 
 @app.route('/review', methods=['GET', 'POST'])
@@ -63,26 +55,76 @@ def review_r():
 
 @app.route('/ad')
 def ad():    
-    # 렌더링시 데이터를 전달하고 싶으면 키=값 형태로 파라미터를 추가
-    # **kargs
     return render_template('subpage/ad.html', name='사용자명')
 
 @app.route('/game')
 def game():    
-    # 렌더링시 데이터를 전달하고 싶으면 키=값 형태로 파라미터를 추가
-    # **kargs
     return render_template('subpage/game.html', name='사용자명')
 ########################################
 
-#####map#####
-@app.route('/map_cafe')
-def map_cafe():    
-    # 렌더링시 데이터를 전달하고 싶으면 키=값 형태로 파라미터를 추가
-    # **kargs
-    return render_template('modpage/cafe/map_cafe.html')
+##### map #####
+@app.route('/map')
+def map():    
+    return render_template('modpage/map.html')
 
+@app.route('/map_han')
+def map_han():    
+    return render_template('modpage/food/map_han.html')
 
+@app.route('/map_yang')
+def map_yang():    
+    return render_template('modpage/food/map_yang.html')    
 
+@app.route('/map_jung')
+def map_jung():    
+    return render_template('modpage/food/map_jung.html')  
+
+@app.route('/map_bun')
+def map_bun():    
+    return render_template('modpage/food/map_bun.html')       
+
+@app.route('/map_enjoy')
+def map_enjoy():    
+    return render_template('modpage/food/map_enj.html')       
+
+@app.route('/map_chicken')
+def map_chicken():    
+    return render_template('modpage/food/map_chicken.html')   
+
+@app.route('/map_bread')
+def map_bread():    
+    return render_template('modpage/food/map_bread.html')
+
+##########################################################
+@app.route('/map_cafe_front')
+def map_cafe_front():    
+    return render_template('modpage/cafe/map_cafe_front.html')
+
+@app.route('/map_cafe_north')
+def map_cafe_north():    
+    return render_template('modpage/cafe/map_cafe_north.html')
+
+@app.route('/map_cafe_sub')
+def map_cafe_sub():    
+    return render_template('modpage/cafe/map_cafe_sub.html')
+
+#############_------------------------------------------
+@app.route('/map_dang')
+def map_dang():    
+    return render_template('modpage/enjoy/map_dang.html')
+
+@app.route('/map_pc')
+def map_pc():    
+    return render_template('modpage/enjoy/map_pc.html')
+
+@app.route('/map_tak')
+def map_tak():    
+    return render_template('modpage/enjoy/map_tak.html')
+
+@app.route('/map_video')
+def map_video():    
+    return render_template('modpage/enjoy/map_video.html')    
+#############_------------------------------------------
 
 
 # food #################################
