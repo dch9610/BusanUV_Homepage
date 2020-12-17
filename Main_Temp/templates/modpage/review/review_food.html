@@ -1,50 +1,31 @@
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-<div>
-  <form method="post" action="insert.jsp">
+<script src="/static/js/common.js"></script>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<form method="post">
+  <div>
     <label>작성자</label>
-    <input class="food-reviewer"  type="text" name="reviewer" 
-    style= "text-align:left; width:150px; height:25px;" request/><br>
-  </form>
-</div>
-<div>
-  <form method="post" action="insert.jsp" class='form-inline'>
-          <label> 음식점</label>
-          &#160;<input type=text class="food-name" name="name" 
-          style=" width:100px; height:25px" request/>
-          <label> 별점</label>
-          &#160;<input class="food-star" name="star" 
-          style="width:100px; height:25px" request/>
-  </form>
-</div>
-<div>
-  <form method="post" action="insert.jsp" class='form-inline'>
-          <label> 메뉴 &#160;&#160;</label>
-          &#160;<input type="text" class="food-menu" name="menu" 
-          style="width:100px; height:25px" request/>
-          &#160;<label> 가격</label>
-          <input type="number" class="food-price" name="price"
-              style="width:100px; height:25px" request/><br>
-  </form>
-  <form method="post" action="insert.jsp">
-    <label>후기</label>
-    &#160; &#160;<input class="food-review" name="review" style="width:450px; height:50px" request/>
-  </form>
+    &#160;<input class="reviewer" type="text" name="reviewer" style="text-align:left; width:150px; height:25px;"
+      request /><br>
   </div>
-<li class="list-group-item">
-  <input type='submit' value='리뷰 등록' class="btn btn-primary btn-block"/>
-  <!-- style="color: #FFFAF0; background-color:#00BFFF; border:none; width:100px; height:30px"/> -->
-  <script type="text/javascript">
-    function getfoodInputValue(){
-      let foodReviewer   = $('.food-reviewer').val()
-      let foodName       = $('.food-name').val()
-      let foodStar       = $('.food-star').val()
-      let foodMenu       = $('.food-menu').val()
-      let foodPrice      = $('.food-price').val()
-      let foodReview     = $('.food-review').val();
-    }
-  </script>
-  <!-- Bootstrap core JavaScript -->
-  <script src="static/vendor/jquery/jquery.min.js"></script>
-  <script src="static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-</li>
+  <div>
+    <label> 음식점</label>
+    &#160;<input type=text class="name" name="name" style=" width:100px; height:25px" request />
+    <label> 평점</label>
+    <input class="star" name="star" style="width:100px; height:25px" placeholder="1~10" request />
+
+  </div>
+  <div>
+
+    <label> 메뉴 &#160;&#160;</label>
+    &#160;<input type="text" class="menu" name="menu" style="width:100px; height:25px" request />
+    <label> 가격</label>
+    <input type="number" class="price" name="price" style="width:100px; height:25px" request /><br>
+
+    <label>후기</label>
+    &#160; &#160;<input class="review" name="review" style="width:450px; height:50px" request />
+
+  </div>
+  <br>
+  <button type='submit' onclick="review()" class="btn btn-primary btn-block" style= "width:150px; height:50px">리뷰 등록</button>
+</form>

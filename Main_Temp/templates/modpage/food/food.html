@@ -27,7 +27,7 @@
             </select>
             <input type='submit' value='조회'/>
           </form><br>
-          <section style="width: 100%; height:300px; overflow: auto; ">
+          <section style="width: 100%; height:300px; overflow: auto;">
             <ul id='results'> 
             </ul>
           </section>
@@ -70,9 +70,10 @@
           })
         </script>
       </div>
+
       <div class="col-md-5">
-       <script>
-        $(document).ready(function(e) {
+        <script>
+          $(document).ready(function(e) {
         /* a요소를 클릭 했을 시 */
             $('a').click(function(){
         /* iframe 요소의 src 속성값을 a 요소의 data-url 속성값으로 변경 */ 
@@ -88,12 +89,14 @@
         <a  data-url="{{url_for('map_enjoy')}}">주점</a>
         <a  data-url="{{url_for('map_chicken')}}">치킨</a>
         <a  data-url="{{url_for('map_bread')}}">빵집</a>
-        <div class = 'videowrapper'>
-          <iframe id="iframe" width="450" height="400" src="{{url_for('map')}}"></iframe>
+        
+        <div class='videowrapper'>
+          <iframe id='iframe' src="{{url_for('map')}}"></iframe>
         </div>
+        <hr>
       </div>
+
     </div>
-    <h3 class="my-4"></h3>
   </div>
   <!-- /.container -->  
 
