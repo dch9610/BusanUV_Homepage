@@ -4,16 +4,22 @@
     <div class="container">
 
         <!-- Portfolio Item Heading -->
-        <h1 class="my-4"> 랜덤 게임입니다.
-            <small>룰루랄라</small>
+        <h1 class="my-4"> 메뉴선정
+            <small>랜덤게임 입니다.</small>
         </h1>
-
+        <hr>
         <!-- Portfolio Item Row -->
         <div class="row">
             <div class="col-md-7">
                 <form name="search" id="search">
-                    ​<input type="text" id="input"> <br>
-                    <textarea id="output"></textarea>
+                    <h3>이용방법</h3>
+                    <p>
+                        첫 칸에 원하는 메뉴를 작성하고 '입력받기'를 누른다. <br>
+                        2개 이상 입력 후 '출력하기' 버튼을 누르면 입력받은 값이 랜덤하게 나온다.
+                    </p>
+                    <hr>
+                    <h5><input type="text" id="input"></h5> <br>
+                    <h5><textarea id="output"></textarea></h5>
                 </form>
 
                 <Script Language="JavaScript">
@@ -37,10 +43,10 @@
                 </Script>
                 <!-- <iframe name="detail" style="width:100%; height:300px; border:none"></iframe> -->
             </div>
-            <button onclick="input()">입력받기</button>
-            <button onclick="output()">출력하기</button>
-            <div class="col-md-5">
 
+            <div class="col-md-5">
+                <button onclick="input()" width="200" height="100">입력받기</button>
+                <button onclick="output()" width="200" height="100">출력하기</button>
             </div>
 
 
